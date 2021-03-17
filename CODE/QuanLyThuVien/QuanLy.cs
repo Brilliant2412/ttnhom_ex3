@@ -25,7 +25,7 @@ namespace QuanLyThuVien
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Sach s = new Sach();
+            QLSach s = new QLSach();
             s.Visible = true;
         }
     }
