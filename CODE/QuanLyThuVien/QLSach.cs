@@ -20,13 +20,14 @@ namespace QuanLyThuVien
         private void Sach_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'ttn_ex3DataSet.Sach' table. You can move, or remove it, as needed.
-            this.sachTableAdapter.Fill(this.ttn_ex3DataSet.Sach);
-
+            //this.sachTableAdapter.Fill(this.ttn_ex3DataSet.Sach);
+            dataGridView1.DataSource = new Database().SelectData("select * from SACH");
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            (new ThemSach(null, dataGridView1)).Show();
+            (new ThemSach(null, dataGridView1)).ShowDialog();
+            reload();
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -34,8 +35,14 @@ namespace QuanLyThuVien
             if (e.RowIndex >= 0)
             {
                 string maSach = dataGridView1.Rows[e.RowIndex].Cells["MaSach"].Value.ToString();
-                new ThemSach(maSach, dataGridView1).Show();
+                new ThemSach(maSach, dataGridView1).ShowDialog();
+                reload();
             }
+        }
+
+        private void reload()
+        {
+            dataGridView1.DataSource = new Database().SelectData("select * from SACH");
         }
     }
 }

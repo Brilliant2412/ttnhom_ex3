@@ -32,9 +32,7 @@ namespace QuanLyThuVien
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.ttn_ex3DataSet = new QuanLyThuVien.ttn_ex3DataSet();
             this.sachBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sachTableAdapter = new QuanLyThuVien.ttn_ex3DataSetTableAdapters.SachTableAdapter();
             this.MaSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTheLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +40,6 @@ namespace QuanLyThuVien
             this.TenNXB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ttn_ex3DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sachBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,19 +74,9 @@ namespace QuanLyThuVien
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // ttn_ex3DataSet
-            // 
-            this.ttn_ex3DataSet.DataSetName = "ttn_ex3DataSet";
-            this.ttn_ex3DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // sachBindingSource
             // 
             this.sachBindingSource.DataMember = "Sach";
-            this.sachBindingSource.DataSource = this.ttn_ex3DataSet;
-            // 
-            // sachTableAdapter
-            // 
-            this.sachTableAdapter.ClearBeforeFill = true;
             // 
             // MaSach
             // 
@@ -150,7 +137,6 @@ namespace QuanLyThuVien
             this.Text = "Sach";
             this.Load += new System.EventHandler(this.Sach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ttn_ex3DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sachBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -160,9 +146,7 @@ namespace QuanLyThuVien
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnAdd;
-        private ttn_ex3DataSet ttn_ex3DataSet;
         private System.Windows.Forms.BindingSource sachBindingSource;
-        private ttn_ex3DataSetTableAdapters.SachTableAdapter sachTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTheLoai;
