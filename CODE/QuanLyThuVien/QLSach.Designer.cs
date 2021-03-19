@@ -32,6 +32,9 @@ namespace QuanLyThuVien
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.cbbForSearchBook = new System.Windows.Forms.ComboBox();
+            this.txtSearchBook = new System.Windows.Forms.TextBox();
+            this.btnSearchBook = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,11 +73,44 @@ namespace QuanLyThuVien
             this.deleteBtn.UseVisualStyleBackColor = true;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // cbbForSearchBook
+            // 
+            this.cbbForSearchBook.FormattingEnabled = true;
+            this.cbbForSearchBook.Items.AddRange(new object[] {
+            "Mã Sách",
+            "Tên Sách",
+            "Thể Loại",
+            "Tên Tác Giả"});
+            this.cbbForSearchBook.Location = new System.Drawing.Point(102, 32);
+            this.cbbForSearchBook.Name = "cbbForSearchBook";
+            this.cbbForSearchBook.Size = new System.Drawing.Size(188, 21);
+            this.cbbForSearchBook.TabIndex = 3;
+            // 
+            // txtSearchBook
+            // 
+            this.txtSearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBook.Location = new System.Drawing.Point(343, 32);
+            this.txtSearchBook.Name = "txtSearchBook";
+            this.txtSearchBook.Size = new System.Drawing.Size(425, 23);
+            this.txtSearchBook.TabIndex = 4;
+            // 
+            // btnSearchBook
+            // 
+            this.btnSearchBook.Location = new System.Drawing.Point(815, 28);
+            this.btnSearchBook.Name = "btnSearchBook";
+            this.btnSearchBook.Size = new System.Drawing.Size(104, 30);
+            this.btnSearchBook.TabIndex = 5;
+            this.btnSearchBook.Text = "Tìm kiếm";
+            this.btnSearchBook.UseVisualStyleBackColor = true;
+            // 
             // QLSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 618);
+            this.Controls.Add(this.btnSearchBook);
+            this.Controls.Add(this.txtSearchBook);
+            this.Controls.Add(this.cbbForSearchBook);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
@@ -84,6 +120,7 @@ namespace QuanLyThuVien
             this.Load += new System.EventHandler(this.Sach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -98,5 +135,8 @@ namespace QuanLyThuVien
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNXB;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
         private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.ComboBox cbbForSearchBook;
+        private System.Windows.Forms.TextBox txtSearchBook;
+        private System.Windows.Forms.Button btnSearchBook;
     }
 }
