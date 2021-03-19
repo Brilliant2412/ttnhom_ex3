@@ -102,6 +102,7 @@ namespace QuanLyThuVien
             this.btnSearchBook.TabIndex = 5;
             this.btnSearchBook.Text = "Tìm kiếm";
             this.btnSearchBook.UseVisualStyleBackColor = true;
+            this.btnSearchBook.Click += new System.EventHandler(this.btnSearchBook_Click);
             // 
             // QLSach
             // 
