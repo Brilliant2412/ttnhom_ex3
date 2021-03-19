@@ -42,25 +42,28 @@ namespace QuanLyThuVien
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(210, 188);
+            this.txtUser.Location = new System.Drawing.Point(280, 215);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(100, 20);
+            this.txtUser.Size = new System.Drawing.Size(132, 22);
             this.txtUser.TabIndex = 0;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(210, 248);
+            this.txtPassword.Location = new System.Drawing.Point(280, 283);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '•';
-            this.txtPassword.Size = new System.Drawing.Size(100, 20);
+            this.txtPassword.Size = new System.Drawing.Size(132, 22);
             this.txtPassword.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 191);
+            this.label1.Location = new System.Drawing.Point(169, 218);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 14);
+            this.label1.Size = new System.Drawing.Size(73, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Username";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -68,18 +71,20 @@ namespace QuanLyThuVien
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 251);
+            this.label2.Location = new System.Drawing.Point(169, 287);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 14);
+            this.label2.Size = new System.Drawing.Size(69, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Password";
             // 
             // lilbTaiKhoan
             // 
             this.lilbTaiKhoan.AutoSize = true;
-            this.lilbTaiKhoan.Location = new System.Drawing.Point(353, 13);
+            this.lilbTaiKhoan.Location = new System.Drawing.Point(471, 15);
+            this.lilbTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lilbTaiKhoan.Name = "lilbTaiKhoan";
-            this.lilbTaiKhoan.Size = new System.Drawing.Size(53, 14);
+            this.lilbTaiKhoan.Size = new System.Drawing.Size(71, 17);
             this.lilbTaiKhoan.TabIndex = 4;
             this.lilbTaiKhoan.TabStop = true;
             this.lilbTaiKhoan.Text = "Tài khoản";
@@ -88,9 +93,10 @@ namespace QuanLyThuVien
             // lilbAbout
             // 
             this.lilbAbout.AutoSize = true;
-            this.lilbAbout.Location = new System.Drawing.Point(428, 13);
+            this.lilbAbout.Location = new System.Drawing.Point(571, 15);
+            this.lilbAbout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lilbAbout.Name = "lilbAbout";
-            this.lilbAbout.Size = new System.Drawing.Size(36, 14);
+            this.lilbAbout.Size = new System.Drawing.Size(45, 17);
             this.lilbAbout.TabIndex = 5;
             this.lilbAbout.TabStop = true;
             this.lilbAbout.Text = "About";
@@ -99,9 +105,10 @@ namespace QuanLyThuVien
             // btnLogin
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Aqua;
-            this.btnLogin.Location = new System.Drawing.Point(147, 309);
+            this.btnLogin.Location = new System.Drawing.Point(196, 353);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(100, 26);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -110,9 +117,10 @@ namespace QuanLyThuVien
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnExit.Location = new System.Drawing.Point(271, 309);
+            this.btnExit.Location = new System.Drawing.Point(361, 353);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 23);
+            this.btnExit.Size = new System.Drawing.Size(100, 26);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -120,10 +128,11 @@ namespace QuanLyThuVien
             // 
             // frmDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
+            this.AcceptButton = this.btnLogin;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(494, 450);
+            this.ClientSize = new System.Drawing.Size(659, 514);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.lilbAbout);
@@ -132,6 +141,7 @@ namespace QuanLyThuVien
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmDangNhap";
             this.Text = "DangNhap";
             this.ResumeLayout(false);
