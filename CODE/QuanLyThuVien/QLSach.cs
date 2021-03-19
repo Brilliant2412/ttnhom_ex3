@@ -49,5 +49,17 @@ namespace QuanLyThuVien
         {
 
         }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            var db = new Database();
+            if (MessageBox.Show("Bạn muốn xóa sách " + dataGridView1.CurrentRow.Cells["TenSach"].Value.ToString() + " ?", "Warning!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                db.del_ctMuonTra(dataGridView1.CurrentRow.Cells["MaSach"].Value.ToString());
+                db.del_dataSach(dataGridView1.CurrentRow.Cells["MaSach"].Value.ToString());
+            }
+
+            reload();
+        }
     }
 }

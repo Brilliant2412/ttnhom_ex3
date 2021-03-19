@@ -35,3 +35,16 @@ C:\Users\Admin\Documents\GitHub\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyTh
 C:\Users\Admin\Documents\GitHub\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\GitHub\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 C:\Users\Admin\Documents\GitHub\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojAssemblyReference.cache
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDangNhap.resources
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QuanLy.resources
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLSach.resources
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemSach.resources
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb

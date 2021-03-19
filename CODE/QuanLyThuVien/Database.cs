@@ -11,7 +11,7 @@ namespace QuanLyThuVien
 {
     class Database
     {
-        private string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=ttn_ex3;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=DESKTOP-68O7DLF;Initial Catalog=ttn_ex3;Trusted_Connection=Yes;";
         private SqlConnection conn;
 
         //private string sql;
@@ -146,15 +146,35 @@ namespace QuanLyThuVien
             return check;
         }
 
-        public bool del_dataHS(string mahs)
+        public bool del_ctMuonTra(string maSach)
         {
             bool check = false;
             try
             {
                 conn.Open();
-                string sql = "DELETE From HOCSINH where MaHS = '" + mahs + "'";
+                string sql1 = "DELETE From CT_MuonTra where MaSach = '" + maSach + "'";
+                SqlCommand cmd1 = new SqlCommand(sql1, conn);                
+                cmd1.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+
+        public bool del_dataSach(string maSach)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql = "DELETE From Sach where MaSach = '" + maSach + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();                
                 check = true;
                 conn.Close();
             }
