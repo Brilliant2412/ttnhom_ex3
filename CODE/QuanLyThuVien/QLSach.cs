@@ -44,5 +44,10 @@ namespace QuanLyThuVien
         {
             dataGridView1.DataSource = new Database().SelectData("select * from SACH");
         }
+
+        private void sachBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

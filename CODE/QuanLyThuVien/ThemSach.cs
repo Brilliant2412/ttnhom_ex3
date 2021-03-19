@@ -29,6 +29,12 @@ namespace QuanLyThuVien
             }
             else
             {
+                var r = new Database().Select(string.Format("SelectSachById '" + maSach + "'"));
+                tboxTheLoai.Text = r["TenTheLoai"].ToString();
+                tboxNXB.Text = r["TenNXB"].ToString();
+                tboxTacGia.Text = r["TenTacGia"].ToString();
+                tboxTenSach.Text = r["TenSach"].ToString();
+                nudSoLuong.Value = int.Parse(r["SoLuong"].ToString());
                 this.Text = "Chỉnh sửa đầu sách";
             }
         }
@@ -50,10 +56,10 @@ namespace QuanLyThuVien
             }
             else
             {
-                sql = "UpdateGV";
+                sql = "UpdateSach";
                 lstPara.Add(new CustomParameter()
                 {
-                    key = "@MaGV",
+                    key = "@MaSach",
                     value = maSach
                 });
             }
