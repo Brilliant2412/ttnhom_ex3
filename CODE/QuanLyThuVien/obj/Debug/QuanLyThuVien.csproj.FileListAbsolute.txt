@@ -49,3 +49,19 @@ D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.Core
 D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 D:\thuctapnhom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchBook.resources
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDangNhap.resources
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.DocGia.resources
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchBook.resources
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QuanLy.resources
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLSach.resources
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemDocGia.resources
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemSach.resources
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb

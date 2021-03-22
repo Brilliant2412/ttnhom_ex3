@@ -59,11 +59,11 @@
     <Compile Include="DocGia.Designer.cs">
       <DependentUpon>DocGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="ThemDocGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ThemDocGia.Designer.cs">
+      <DependentUpon>ThemDocGia.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSearchBook.cs">
       <SubType>Form</SubType>
@@ -94,6 +94,9 @@
     <EmbeddedResource Include="DangNhap.resx">
       <DependentUpon>DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DocGia.resx">
+      <DependentUpon>DocGia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSearchBook.resx">
       <DependentUpon>FormSearchBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QLSach.resx">
       <DependentUpon>QLSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemDocGia.resx">
+      <DependentUpon>ThemDocGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemSach.resx">
       <DependentUpon>ThemSach.cs</DependentUpon>
