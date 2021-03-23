@@ -37,7 +37,81 @@ namespace QuanLyThuVien
             new ThemDocGia(null).ShowDialog();
         }
 
+        private void reload()
+        {
+            dgvDocGia.DataSource = new Database().SelectData("select * from DocGia");
+        }
 
+        private void btnDealeteReader_Click(object sender, EventArgs e)
+        {
+            var db = new Database();
+            if (MessageBox.Show("Bạn muốn xóa độc giả có mã " + dgvDocGia.CurrentRow.Cells["MaDG"].Value.ToString() + " ?", "Warning!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                db.del_DocGia(dgvDocGia.CurrentRow.Cells["MaDG"].Value.ToString());
+            }
+
+            reload();
+        }
+
+        private void resetValue()
+        {
+            txtSearchReader.Text = "";
+        }
+
+        private void btnSearchReader_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSearchReader.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập thông tin tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                if (cbbForSearchReader.SelectedIndex != -1)
+                {
+                    String valueSearch = txtSearchReader.Text;
+                    var db = new Database();
+                    String sqlSearch = "";
+                    if (cbbForSearchReader.SelectedIndex == 0)
+                    {
+                        sqlSearch = "exec searchMaDG '" + valueSearch + "'";
+                        if (db.SelectData(sqlSearch).Rows.Count != 0)
+                        {
+                            new FormSearchReader(sqlSearch).Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else if (cbbForSearchReader.SelectedIndex == 1)
+                    {
+                        sqlSearch = "exec searchTenDG N'" + valueSearch + "'";
+                        if (db.SelectData(sqlSearch).Rows.Count != 0)
+                        {
+                            new FormSearchReader(sqlSearch).Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else if (cbbForSearchReader.SelectedIndex == 2)
+                    {
+                        sqlSearch = "exec searchSoThe '" + valueSearch + "'";
+                        if (db.SelectData(sqlSearch).Rows.Count != 0)
+                        {
+                            new FormSearchReader(sqlSearch).Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không tìm thấy thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    
+                }
+                resetValue();
+            }
+        }
     }
 }
 
