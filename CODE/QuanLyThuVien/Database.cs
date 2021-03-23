@@ -11,7 +11,7 @@ namespace QuanLyThuVien
 {
     class Database
     {
-        private string connectionString = "Data Source=DESKTOP-P5SQIP5;Initial Catalog=ttn_ex3;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=LAPCUATUNG\\SQLEXPRESS;Initial Catalog=ttn_ex3;Integrated Security=True;";
         private SqlConnection conn;
 
         //private string sql;

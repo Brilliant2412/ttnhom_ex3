@@ -1,0 +1,87 @@
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* 62.5% => 1rem = 10px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: red;
+    text-transform: uppercase;
+    font-size: 3.6rem;
+    text-align: center;
+    display: block;
+    margin: 30px 0;
+}
+
+h2 {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+}
+
+h3 {
+    font-size: 2.0rem;
+    line-height: 2.0rem;
+}
+
+p {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+}
+
+.content {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.formLogin-img,
+.formTimKiem-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.formLogin-img img,
+.formTimKiem-img img {
+    width: 500px;
+    margin: 20px 30px;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 2px;
+}
+
+li {
+    font-size: 1.8rem;
+    margin: 4px auto;
+}
+
+.formManage-img,
+.formQLHS-img,
+.formThemHS-img,
+.formSuaHS-img,
+.formXoaHS-img,
+.formQLLop-img,
+.formSuaLop-img,
+.formXoaLop-img,
+.formQLGV-img,
+.formThemGiaoVien-img,
+.formSuaGV-img,
+.formXoaGV-img {
+    width: 92%;
+    margin: 20px 30px;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 2px;
+}
+
+footer {
+    font-size: 1.7em;
+    background-color: gray;
+    padding: 1em;
+    text-transform: uppercase;
+}
