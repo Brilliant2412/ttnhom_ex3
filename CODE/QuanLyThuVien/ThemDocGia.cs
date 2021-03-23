@@ -27,7 +27,7 @@ namespace QuanLyThuVien
             cboxSoThe.DataSource = theTable.Copy();
             if (string.IsNullOrEmpty(maDocGia))
             {
-                this.Text = "Thêm đầu sách";
+                this.Text = "Thêm độc giả";
 
             }
             else
@@ -35,9 +35,9 @@ namespace QuanLyThuVien
                 var r = new Database().Select(string.Format("SelectDocGiaById '" + maDocGia + "'"));
                 tboxDiaChi.Text = r["DiaChi"].ToString();
                 tboxTenDocGia.Text = r["TenDocGia"].ToString();
+                
 
-
-                this.Text = "Chỉnh sửa đầu sách";
+                this.Text = "Chỉnh sửa thông tin độc giả";
             }
         }
 

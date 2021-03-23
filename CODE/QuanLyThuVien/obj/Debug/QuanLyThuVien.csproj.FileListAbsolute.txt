@@ -65,3 +65,6 @@ C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\obj\Deb
 C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
 C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
 C:\Users\Admin\Documents\GitHub\New folder\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+C:\Users\Admin\source\repos\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.DocGia.resources
+C:\Users\Admin\source\repos\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchBook.resources
+C:\Users\Admin\source\repos\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemDocGia.resources

@@ -42,10 +42,11 @@ namespace QuanLyThuVien
             // 
             // cboxSoThe
             // 
+            this.cboxSoThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxSoThe.FormattingEnabled = true;
             this.cboxSoThe.Location = new System.Drawing.Point(252, 263);
             this.cboxSoThe.Name = "cboxSoThe";
-            this.cboxSoThe.Size = new System.Drawing.Size(443, 24);
+            this.cboxSoThe.Size = new System.Drawing.Size(443, 37);
             this.cboxSoThe.TabIndex = 37;
             // 
             // label6
