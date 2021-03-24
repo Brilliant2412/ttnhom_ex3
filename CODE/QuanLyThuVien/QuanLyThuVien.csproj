@@ -59,11 +59,23 @@
     <Compile Include="DocGia.Designer.cs">
       <DependentUpon>DocGia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSearchMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchMuonTra.Designer.cs">
+      <DependentUpon>FormSearchMuonTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormSearchReader.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormSearchReader.Designer.cs">
       <DependentUpon>FormSearchReader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QLMuonTra.Designer.cs">
+      <DependentUpon>QLMuonTra.cs</DependentUpon>
     </Compile>
     <Compile Include="ThemDocGia.cs">
       <SubType>Form</SubType>
@@ -91,6 +103,12 @@
     <Compile Include="QLSach.Designer.cs">
       <DependentUpon>QLSach.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThemMuonTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemMuonTra.Designer.cs">
+      <DependentUpon>ThemMuonTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThemSach.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +124,9 @@
     <EmbeddedResource Include="FormSearchBook.resx">
       <DependentUpon>FormSearchBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchMuonTra.resx">
+      <DependentUpon>FormSearchMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormSearchReader.resx">
       <DependentUpon>FormSearchReader.cs</DependentUpon>
     </EmbeddedResource>
@@ -118,6 +139,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QLMuonTra.resx">
+      <DependentUpon>QLMuonTra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLy.resx">
       <DependentUpon>QuanLy.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ThemDocGia.resx">
       <DependentUpon>ThemDocGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemMuonTra.resx">
+      <DependentUpon>ThemMuonTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemSach.resx">
       <DependentUpon>ThemSach.cs</DependentUpon>

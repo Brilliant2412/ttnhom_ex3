@@ -29,13 +29,10 @@ create table Sach(
 	SoLuong int
 )
 
---------- -1 khi muon sach, 
-
 create table MuonTra(
 	MaMuon char(10) primary key,
-	NgayMuon datetime default CURRENT_TIMESTAMP,
+	NgayMuon datetime,
 	NgayHenTra datetime,
-	TinhTrang bit,
 	SoThe char(10) references TheThuVien(SoThe)
 )
 ----------------- Da_Tra = 0 tuc la chua tra sach
@@ -45,6 +42,7 @@ create table CT_MuonTra(
 	MaSach char(10) references Sach(MaSach),
 	NgayTra datetime default null,
 	Da_Tra bit
+	PRIMARY KEY (MaMuon, MaSach)
 )
 
 -- the thu vien
@@ -120,26 +118,26 @@ insert into Sach(MaSach, TenSach, TenTheLoai,TenTacGia,TenNXB,SoLuong)
 values('MS0010',N'Địa lý 12',N'học tập',N'Hà',N'Giáo Dục',1000);
 select * from Sach
 -- muon tra
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0001','1996-01-01','1996-07-01',1,'TV0001');
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0002','1997-01-10','1997-08-10',1,'TV0002');
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0003','2002-01-12','2002-09-12',1,'TV0003');
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0004','2002-06-01','2002-12-01',1,'TV0004');
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0005','2004-04-01','2005-01-01',1,'TV0005');
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0006','2003-02-27','2003-08-26',1,'TV0006');
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0007','1997-09-12','1998-03-12',1,'TV0007');
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0008','2005-07-28','2006-01-28',1,'TV0008');
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0009','2006-02-01','2006-08-03',1,'TV0009');
-insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,TinhTrang,SoThe)
-values('MM0010','2007-12-01','2008-06-01',1,'TV0010');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0001','1996-01-01','1996-07-01','TV0001');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0002','1997-01-10','1997-08-10','TV0002');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0003','2002-01-12','2002-09-12','TV0003');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0004','2002-06-01','2002-12-01','TV0004');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0005','2004-04-01','2005-01-01','TV0005');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0006','2003-02-27','2003-08-26','TV0006');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0007','1997-09-12','1998-03-12','TV0007');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0008','2005-07-28','2006-01-28','TV0008');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0009','2006-02-01','2006-08-03','TV0009');
+insert into MuonTra(MaMuon, NgayMuon, NgayHenTra,SoThe)
+values('MM0010','2007-12-01','2008-06-01','TV0010');
 select * from MuonTra
 -- chi tiet muon tra
 insert into CT_MuonTra(MaMuon, MaSach, NgayTra,Da_Tra)
@@ -204,6 +202,7 @@ end
 
 ----------Tim kiem Sach--------
 --MaHS--
+GO
 create procedure searchMaSach @MaSach char(10)
 as 
 begin
@@ -290,6 +289,7 @@ begin
 	where MaDG = @MaDG
 end
 
+GO
 create procedure searchTenDG @TenDG nvarchar(50)
 as 
 begin
@@ -298,10 +298,84 @@ begin
 	where TenDocGia = @TenDG
 end
 
+GO
 create procedure searchSoThe @Sothe char(10)
 as 
 begin
 	select MaDG, TenDocGia, DiaChi, SoThe
 	from DocGia
+	where SoThe = @Sothe
+end
+
+
+-- Mượn trả
+CREATE SEQUENCE [dbo].[MuonTra_seq] 
+ AS [bigint]
+ START WITH 11
+ INCREMENT BY 1
+ MINVALUE -92233720
+ MAXVALUE 99999999
+ CACHE 
+ DROP SEQUENCE [dbo].[MuonTra_seq] 
+go
+create procedure SelectMuonTraById
+	@maMuon char(10)
+as
+begin
+	select convert(VARCHAR(10), NgayMuon, 103) as NgayMuon, convert(VARCHAR(10), NgayHenTra, 103) as NgayHenTra, SoThe 
+	from MuonTra 
+	where MaMuon = @maMuon
+end
+
+EXEC SelectMuonTraById 'MM0001'
+
+GO
+CREATE PROCEDURE ThemMoiMuonTra
+	@ngayMuon DATETIME,
+	@ngayHenTra DATETIME,
+	@soThe CHAR(10)
+AS
+BEGIN
+	insert into MUONTRA (MaMuon, NgayMuon, NgayHenTra, SoThe)
+	values(
+		'MM00' + cast(next value for MuonTra_seq as char(4)),
+		@ngayMuon,
+		@ngayHenTra,
+		@soThe
+		);
+	if @@ROWCOUNT > 0 begin return 1 end
+	else begin return 0 end;
+END
+
+GO
+create procedure UpdateMuonTra
+	@maMuon char(10),
+	@ngayMuon DATETIME, 
+	@ngayHenTra DATETIME,
+	@soThe char(10)
+as
+begin
+	update MuonTra
+	set NgayMuon = @ngayMuon,
+		NgayHenTra = @ngayHenTra,
+		SoThe = @soThe
+	where MaMuon = @maMuon
+end
+
+GO
+create procedure searchMaMuon @MaMuon char(10)
+as 
+begin
+	select MaMuon, NgayMuon, NgayHenTra, SoThe
+	from MuonTra
+	where MaMuon = @MaMuon
+end
+
+GO
+create procedure searchSoTheNguoiMuon @Sothe char(10)
+as 
+begin
+	select MaMuon, NgayMuon, NgayHenTra, SoThe
+	from MuonTra
 	where SoThe = @Sothe
 end

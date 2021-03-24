@@ -108,7 +108,7 @@ namespace QuanLyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 618);
+            this.ClientSize = new System.Drawing.Size(1106, 618);
             this.Controls.Add(this.btnSearchBook);
             this.Controls.Add(this.txtSearchBook);
             this.Controls.Add(this.cbbForSearchBook);

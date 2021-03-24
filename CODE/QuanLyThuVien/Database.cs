@@ -11,7 +11,7 @@ namespace QuanLyThuVien
 {
     class Database
     {
-        private string connectionString = "Data Source=DESKTOP-P5SQIP5;Initial Catalog=ttn_ex3;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=ttn_ex3;Trusted_Connection=Yes;";
         private SqlConnection conn;
 
         //private string sql;
@@ -101,8 +101,6 @@ namespace QuanLyThuVien
             }
         }
 
-
-        
         public bool del_ctMuonTra(string maSach)
         {
             bool check = false;
@@ -153,6 +151,44 @@ namespace QuanLyThuVien
             {
                 conn.Open();
                 string sql2 = "DELETE From DocGia where MaDG = '" + madg + "'";
+                SqlCommand cmd2 = new SqlCommand(sql2, conn);
+                cmd2.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+        public bool del_MaMuon_CTMuonTra(string maMuon)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql1 = "DELETE From CT_MuonTra where MaMuon = '" + maMuon + "'";
+                SqlCommand cmd1 = new SqlCommand(sql1, conn);
+                cmd1.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+        public bool del_NguoiMuon(string maMuon)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql2 = "DELETE From MuonTra where MaMuon = '" + maMuon + "'";
                 SqlCommand cmd2 = new SqlCommand(sql2, conn);
                 cmd2.ExecuteNonQuery();
                 check = true;

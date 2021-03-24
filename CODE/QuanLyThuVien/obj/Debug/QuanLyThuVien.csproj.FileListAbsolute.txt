@@ -85,3 +85,23 @@ D:\TTN-1\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompil
 D:\TTN-1\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 D:\TTN-1\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
 D:\TTN-1\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchReader.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojAssemblyReference.cache
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDangNhap.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.DocGia.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchBook.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchReader.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QuanLy.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLSach.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemDocGia.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemSach.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLMuonTra.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemMuonTra.resources
+E:\Thực tập nhóm\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchMuonTra.resources
