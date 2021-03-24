@@ -102,3 +102,20 @@ C:\Users\HP\source\repos\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.c
 C:\Users\HP\source\repos\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 C:\Users\HP\source\repos\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe.config
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.exe
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\bin\Debug\QuanLyThuVien.pdb
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csprojAssemblyReference.cache
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.frmDangNhap.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.DocGia.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchBook.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchReader.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.Properties.Resources.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QuanLy.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLSach.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemDocGia.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemSach.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.GenerateResource.cache
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
