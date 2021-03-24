@@ -49,6 +49,7 @@ namespace QuanLyThuVien
             this.ClientSize = new System.Drawing.Size(700, 352);
             this.Controls.Add(this.dgvSearchMuonTra);
             this.Name = "FormSearchMuonTra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchMuonTra";
             this.Load += new System.EventHandler(this.FormSearchMuonTra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchMuonTra)).EndInit();

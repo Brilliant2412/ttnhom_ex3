@@ -112,6 +112,7 @@ namespace QuanLyThuVien
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvMuonTra);
             this.Name = "QLMuonTra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLMuonTra";
             this.Load += new System.EventHandler(this.QLMuonTra_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMuonTra)).EndInit();
