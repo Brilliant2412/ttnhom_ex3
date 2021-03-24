@@ -11,7 +11,7 @@ namespace QuanLyThuVien
 {
     class Database
     {
-        private string connectionString = "Data Source=localhost\\SQLEXPRESS;Initial Catalog=ttn_ex3;Trusted_Connection=Yes;";
+        private string connectionString = "Data Source=LAPCUATUNG\\SQLEXPRESS;Initial Catalog=ttn_ex3;Integrated Security=True;";
         private SqlConnection conn;
 
         //private string sql;
@@ -102,50 +102,7 @@ namespace QuanLyThuVien
         }
 
 
-        public Boolean del_data(String magv)
-        {
-            bool check = false;
-            try
-            {
-                conn.Open();
-                string sql = "DELETE From GIAOVIEN where MaGV = '" + magv + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-                check = true;
-                conn.Close();
-            }
-            catch (Exception)
-            {
-                check = false;
-                throw;
-            }
-
-
-            return check;
-        }
-
-        public bool del_dataLop(String maLop)
-        {
-            bool check = false;
-            try
-            {
-                conn.Open();
-                string sql = "DELETE From LOP where MaLop = '" + maLop + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.ExecuteNonQuery();
-                check = true;
-                conn.Close();
-            }
-            catch (Exception)
-            {
-                check = false;
-                throw;
-            }
-
-
-            return check;
-        }
-
+        
         public bool del_ctMuonTra(string maSach)
         {
             bool check = false;
@@ -187,6 +144,28 @@ namespace QuanLyThuVien
 
             return check;
         }
+
+        /*------------------------------------------------------------------------------*/
+        public bool del_DocGia(string madg)
+        {
+            bool check = false;
+            try
+            {
+                conn.Open();
+                string sql2 = "DELETE From DocGia where MaDG = '" + madg + "'";
+                SqlCommand cmd2 = new SqlCommand(sql2, conn);
+                cmd2.ExecuteNonQuery();
+                check = true;
+                conn.Close();
+            }
+            catch
+            {
+                check = false;
+                throw;
+            }
+            return check;
+        }
+
 
         public bool executeNonQuery(string sql)
         {

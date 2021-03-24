@@ -164,3 +164,144 @@ insert into CT_MuonTra(MaMuon, MaSach, NgayTra,Da_Tra)
 values('MM0010','MS0010','',0);
 
 select * from CT_MuonTra
+
+
+
+CREATE SEQUENCE [dbo].[Sach_seq] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE 
+GO
+
+
+create procedure [dbo].[ThemMoiSach]
+	@tenSach nvarchar(50),
+	@tenTheLoai nvarchar(50),
+	@tenTacGia nvarchar(50),
+	@tenNXB nvarchar(50),
+	@soLuong int
+as 
+begin
+	insert into SACH
+	(
+		MaSach, TenSach, TenTheLoai, TenTacGia, TenNXB, SoLuong
+	)values(
+		'MS' + cast(next value for Sach_seq as char(4)),
+		@tenSach,
+		@tenTheLoai,
+		@tenTacGia,
+		@tenNXB,
+		@soLuong
+		);
+
+		if @@ROWCOUNT > 0 begin return 1 end
+		else begin return 0 end;
+end
+
+
+----------Tim kiem Sach--------
+--MaHS--
+create procedure searchMaSach @MaSach char(10)
+as 
+begin
+	select MaSach, TenSach, TenTheLoai, TenTacGia,
+		TenNXB, convert(varchar(10),Sach.SoLuong) as SoLuong
+	from Sach
+	where MaSach = @MaSach
+end
+go
+exec searchMaSach 'MS0006'
+
+go
+--Ten sach--
+create procedure searchTenSach @TenSach nvarchar(50)
+as 
+begin
+	select MaSach, TenSach, TenTheLoai, TenTacGia,
+		TenNXB, convert(varchar(10),Sach.SoLuong) as SoLuong
+	from Sach
+	where TenSach = @TenSach
+end
+go
+exec searchTenSach N'Làm chủ 660 TOEIC'
+go
+--Ten the loai--
+create procedure searchTenTheLoai @TenTheLoai nvarchar(50)
+as 
+begin
+	select MaSach, TenSach, TenTheLoai, TenTacGia,
+		TenNXB, convert(varchar(10),Sach.SoLuong) as SoLuong
+	from Sach
+	where TenTheLoai = @TenTheLoai
+end
+go
+exec searchTenTheLoai N'lập trình'
+go
+--Ten tac gia--
+create procedure searchTenTacGia @TenTacGia nvarchar(50)
+as 
+begin
+	select MaSach, TenSach, TenTheLoai, TenTacGia,
+		TenNXB, convert(varchar(10),Sach.SoLuong) as SoLuong
+	from Sach
+	where TenTacGia = @TenTacGia
+end
+go
+exec searchTenTacGia N'Vũ Anh Tú'
+go
+
+--Sửa độc giả
+create procedure UpdateDocGia 
+	@maDocGia char(10),
+	@tenDocGia nvarchar(50), 
+	@diaChi nvarchar(50),
+	@soThe char(10)
+as
+begin
+	update DocGia
+	set TenDocGia = @tenDocGia,
+	DiaChi = @diaChi,
+	SoThe = @soThe
+	where MaDG = @maDocGia
+end
+go
+
+create procedure SelectDocGiaById
+	@maDocGia char(10)
+as
+begin
+	select * from DocGia where MaDG = @maDocGia
+end
+go
+
+
+
+
+
+-----Search Doc Gia--------
+create procedure searchMaDG @MaDG char(10)
+as 
+begin
+	select MaDG, TenDocGia, DiaChi, SoThe
+	from DocGia
+	where MaDG = @MaDG
+end
+
+create procedure searchTenDG @TenDG nvarchar(50)
+as 
+begin
+	select MaDG, TenDocGia, DiaChi, SoThe
+	from DocGia
+	where TenDocGia = @TenDG
+end
+
+create procedure searchSoThe @Sothe char(10)
+as 
+begin
+	select MaDG, TenDocGia, DiaChi, SoThe
+	from DocGia
+	where SoThe = @Sothe
+end
