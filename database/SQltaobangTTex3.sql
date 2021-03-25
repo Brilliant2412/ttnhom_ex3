@@ -69,6 +69,9 @@ values('TV0009','2006-01-01','2011-01-01');
 insert into TheThuVien(SoThe, NgayBatDau, NgayHetHan)
 values('TV0010','2007-11-03','2011-11-03');
 
+
+insert into TheThuVien(SoThe)
+values('TV0022');
 select * from TheThuVien
 
 --doc gia
@@ -316,7 +319,6 @@ CREATE SEQUENCE [dbo].[MuonTra_seq]
  MINVALUE -92233720
  MAXVALUE 99999999
  CACHE 
- DROP SEQUENCE [dbo].[MuonTra_seq] 
 go
 create procedure SelectMuonTraById
 	@maMuon char(10)

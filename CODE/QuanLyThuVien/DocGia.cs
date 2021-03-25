@@ -35,6 +35,7 @@ namespace QuanLyThuVien
         private void addDocGiaBtn_Click(object sender, EventArgs e)
         {
             new ThemDocGia(null).ShowDialog();
+            reload();
         }
 
         private void reload()

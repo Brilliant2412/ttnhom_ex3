@@ -126,3 +126,6 @@ C:\Users\Admin\Documents\GitHub\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyTh
 C:\Users\Admin\Documents\GitHub\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLMuonTra.resources
 C:\Users\Admin\Documents\GitHub\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemDocGia.resources
 C:\Users\Admin\Documents\GitHub\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemMuonTra.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormSearchMuonTra.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.QLMuonTra.resources
+E:\1 school\1 ki 6\TT NHom\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.ThemMuonTra.resources
