@@ -38,13 +38,17 @@ namespace QuanLyThuVien
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dtpNgayBatDau = new System.Windows.Forms.DateTimePicker();
+            this.dtpNgayKetThuc = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cboxSoThe
             // 
             this.cboxSoThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboxSoThe.FormattingEnabled = true;
-            this.cboxSoThe.Location = new System.Drawing.Point(252, 263);
+            this.cboxSoThe.Location = new System.Drawing.Point(286, 265);
             this.cboxSoThe.Name = "cboxSoThe";
             this.cboxSoThe.Size = new System.Drawing.Size(443, 37);
             this.cboxSoThe.TabIndex = 37;
@@ -63,7 +67,7 @@ namespace QuanLyThuVien
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(501, 359);
+            this.btnSave.Location = new System.Drawing.Point(505, 444);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 48);
             this.btnSave.TabIndex = 35;
@@ -74,7 +78,7 @@ namespace QuanLyThuVien
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(187, 359);
+            this.btnCancel.Location = new System.Drawing.Point(191, 444);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 48);
             this.btnCancel.TabIndex = 34;
@@ -85,7 +89,7 @@ namespace QuanLyThuVien
             // tboxDiaChi
             // 
             this.tboxDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxDiaChi.Location = new System.Drawing.Point(252, 180);
+            this.tboxDiaChi.Location = new System.Drawing.Point(286, 182);
             this.tboxDiaChi.Name = "tboxDiaChi";
             this.tboxDiaChi.Size = new System.Drawing.Size(443, 34);
             this.tboxDiaChi.TabIndex = 33;
@@ -93,7 +97,7 @@ namespace QuanLyThuVien
             // tboxTenDocGia
             // 
             this.tboxTenDocGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tboxTenDocGia.Location = new System.Drawing.Point(252, 102);
+            this.tboxTenDocGia.Location = new System.Drawing.Point(286, 104);
             this.tboxTenDocGia.Name = "tboxTenDocGia";
             this.tboxTenDocGia.Size = new System.Drawing.Size(443, 34);
             this.tboxTenDocGia.TabIndex = 32;
@@ -128,11 +132,49 @@ namespace QuanLyThuVien
             this.label1.TabIndex = 29;
             this.label1.Text = "Tên độc giả";
             // 
+            // dtpNgayBatDau
+            // 
+            this.dtpNgayBatDau.Location = new System.Drawing.Point(286, 326);
+            this.dtpNgayBatDau.Name = "dtpNgayBatDau";
+            this.dtpNgayBatDau.Size = new System.Drawing.Size(443, 22);
+            this.dtpNgayBatDau.TabIndex = 38;
+            // 
+            // dtpNgayKetThuc
+            // 
+            this.dtpNgayKetThuc.Location = new System.Drawing.Point(286, 383);
+            this.dtpNgayKetThuc.Name = "dtpNgayKetThuc";
+            this.dtpNgayKetThuc.Size = new System.Drawing.Size(443, 22);
+            this.dtpNgayKetThuc.TabIndex = 40;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(103, 326);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 29);
+            this.label4.TabIndex = 41;
+            this.label4.Text = "Ngày Bắt Đầu";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(109, 378);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(171, 29);
+            this.label5.TabIndex = 42;
+            this.label5.Text = "Ngày Kết Thúc";
+            // 
             // ThemDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(839, 570);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.dtpNgayKetThuc);
+            this.Controls.Add(this.dtpNgayBatDau);
             this.Controls.Add(this.cboxSoThe);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSave);
@@ -161,5 +203,9 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpNgayBatDau;
+        private System.Windows.Forms.DateTimePicker dtpNgayKetThuc;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
