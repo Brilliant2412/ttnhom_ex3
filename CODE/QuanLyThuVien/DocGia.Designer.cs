@@ -53,12 +53,12 @@ namespace QuanLyThuVien
             // 
             this.dgvDocGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDocGia.Location = new System.Drawing.Point(6, 66);
+            this.dgvDocGia.Location = new System.Drawing.Point(58, 68);
             this.dgvDocGia.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDocGia.Name = "dgvDocGia";
             this.dgvDocGia.RowHeadersWidth = 51;
             this.dgvDocGia.RowTemplate.Height = 24;
-            this.dgvDocGia.Size = new System.Drawing.Size(762, 284);
+            this.dgvDocGia.Size = new System.Drawing.Size(939, 284);
             this.dgvDocGia.TabIndex = 2;
             this.dgvDocGia.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocGia_CellDoubleClick);
             // 
@@ -105,7 +105,7 @@ namespace QuanLyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 509);
+            this.ClientSize = new System.Drawing.Size(1046, 648);
             this.Controls.Add(this.btnDealeteReader);
             this.Controls.Add(this.btnSearchReader);
             this.Controls.Add(this.txtSearchReader);

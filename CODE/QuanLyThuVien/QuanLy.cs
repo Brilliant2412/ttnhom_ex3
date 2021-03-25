@@ -28,5 +28,11 @@ namespace QuanLyThuVien
             QLSach s = new QLSach();
             s.Visible = true;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            QLMuonTra MuonTra = new QLMuonTra();
+            MuonTra.Visible = true;
+        }
     }
 }

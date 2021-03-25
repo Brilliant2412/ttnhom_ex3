@@ -36,7 +36,6 @@ namespace QuanLyThuVien
                 tboxDiaChi.Text = r["DiaChi"].ToString();
                 tboxTenDocGia.Text = r["TenDocGia"].ToString();
                 
-
                 this.Text = "Chỉnh sửa thông tin độc giả";
             }
         }
