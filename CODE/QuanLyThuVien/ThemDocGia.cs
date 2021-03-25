@@ -45,7 +45,8 @@ namespace QuanLyThuVien
             string sql;
             string tenDocGia = tboxTenDocGia.Text;
             string diaChi = tboxDiaChi.Text;
-            string soThe = cboxSoThe.Text;
+            DataRowView drvSoThe = (DataRowView)cboxSoThe.SelectedItem;
+            string soThe = drvSoThe.Row.Field<string>("SoThe");
 
             List<CustomParameter> lstPara = new List<CustomParameter>();
 
