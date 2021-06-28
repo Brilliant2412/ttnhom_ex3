@@ -35,6 +35,7 @@ namespace QuanLyThuVien
             this.cbbOption = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvMuonTra = new System.Windows.Forms.DataGridView();
+            this.btnTraSach = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMuonTra)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,10 +54,10 @@ namespace QuanLyThuVien
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Aqua;
-            this.btnSearch.Location = new System.Drawing.Point(1099, 25);
+            this.btnSearch.Location = new System.Drawing.Point(1099, 23);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(112, 41);
+            this.btnSearch.Size = new System.Drawing.Size(112, 44);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Tìm kiếm";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -107,12 +108,24 @@ namespace QuanLyThuVien
             this.dgvMuonTra.TabIndex = 8;
             this.dgvMuonTra.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMuonTra_CellDoubleClick);
             // 
+            // btnTraSach
+            // 
+            this.btnTraSach.BackColor = System.Drawing.Color.Aqua;
+            this.btnTraSach.Location = new System.Drawing.Point(973, 23);
+            this.btnTraSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTraSach.Name = "btnTraSach";
+            this.btnTraSach.Size = new System.Drawing.Size(119, 44);
+            this.btnTraSach.TabIndex = 14;
+            this.btnTraSach.Text = "Trả sách";
+            this.btnTraSach.UseVisualStyleBackColor = false;
+            // 
             // QLMuonTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyThuVien.Properties.Resources._12fd70f0805bf2306f87753b08627757;
             this.ClientSize = new System.Drawing.Size(1436, 687);
+            this.Controls.Add(this.btnTraSach);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txbInfor);
@@ -138,5 +151,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.ComboBox cbbOption;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridView dgvMuonTra;
+        private System.Windows.Forms.Button btnTraSach;
     }
 }

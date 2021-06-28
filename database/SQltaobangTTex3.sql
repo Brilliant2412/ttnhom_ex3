@@ -35,6 +35,8 @@ create table MuonTra(
 	NgayHenTra datetime,
 	SoThe char(10) references TheThuVien(SoThe)
 )
+
+
 ----------------- Da_Tra = 0 tuc la chua tra sach
 ------------------- = 1 la da tra sach
 create table CT_MuonTra(
@@ -325,14 +327,10 @@ CREATE SEQUENCE [dbo].[MuonTra_seq]
  MAXVALUE 99999999
  CACHE 
 go
-create procedure SelectMuonTraById
-	@maMuon char(10)
-as
-begin
-	select convert(VARCHAR(10), NgayMuon, 103) as NgayMuon, convert(VARCHAR(10), NgayHenTra, 103) as NgayHenTra, SoThe 
-	from MuonTra 
-	where MaMuon = @maMuon
-end
+
+
+
+exec SelectMuonTraandCTMTById 
 
 EXEC SelectMuonTraById 'MM0001'
 
@@ -396,3 +394,255 @@ begin
 	from Sach
 	where MaSach = @MaSach
 end
+
+exec SelectSachById 'MS2'
+
+create procedure UpdateSach
+	@MaSach char(10),
+	@tenSach nvarchar(50),
+	@tenTheLoai nvarchar(50),
+	@tenTacGia nvarchar(50),
+	@tenNXB nvarchar(50),
+	@soLuong int
+as
+begin
+	update Sach
+	set TenSach = @tenSach,
+		TenTheLoai = @tenTheLoai,
+		TenTacGia = @tenTacGia,
+		TenNXB = @tenNXB,
+		SoLuong = @soLuong
+	where MaSach = @MaSach
+end
+----- MT CTMT
+alter procedure listAllSachAvailable
+as
+begin
+	select TenSach
+	from Sach 
+	where SoLuong > 0;
+end
+
+ALTER PROCEDURE [dbo].[ThemMoiMuonTra]
+	@MaMuon char(10),
+	@ngayMuon DATETIME,
+	@ngayHenTra DATETIME,
+	@soThe CHAR(10)
+AS
+BEGIN
+	insert into MUONTRA (MaMuon, NgayMuon, NgayHenTra, SoThe)
+	values(
+		'MM' + cast(@MaMuon as char(4)),
+		@ngayMuon,
+		@ngayHenTra,
+		@soThe
+		);
+	if @@ROWCOUNT > 0 begin return 1 end
+	else begin return 0 end;
+END
+
+alter procedure ThemMoiCTMuonTra
+	@MaMM char (10),
+	@TenSach nvarchar(50)
+AS
+BEGIN
+	declare @MaSach char(10);
+	set @MaSach = (select MaSach from Sach where TenSach = @TenSach and SoLuong > 0)
+
+	insert into CT_MuonTra(MaMuon, MaSach, NgayTra, Da_Tra)
+	values(
+		'MM' + cast(@MaMM as char(4)),
+		@MaSach,
+		null,
+		0
+		);
+	if @@ROWCOUNT > 0 begin return 1 end
+	else begin return 0 end;
+END
+
+SELECT current_value FROM sys.sequences WHERE name = 'MuonTra_seq'
+
+alter procedure SelectMuonTraandCTMTById
+	@maMuon char(10)
+as
+begin
+	select convert(VARCHAR(10), mt.NgayMuon, 103) as NgayMuon, convert(VARCHAR(10), mt.NgayHenTra, 103) as NgayHenTra, mt.SoThe,s.TenSach  
+	from MuonTra mt,CT_MuonTra as ctmt, Sach as s
+	where mt.MaMuon = @maMuon and mt.MaMuon = ctmt.MaMuon and ctmt.MaSach = s.MaSach and ctmt.Da_Tra = 0
+end
+
+exec SelectMuonTraandCTMTById 'MM0001'
+
+create proc GetAllMTandCTMT
+as
+begin
+	select mt.MaMuon,s.TenSach, mt.NgayMuon,mt.NgayHenTra,dg.TenDocGia
+	from MuonTra as mt
+	left join CT_MuonTra as ctmt
+	on ctmt.MaMuon = mt.MaMuon
+	left join Sach as s
+	on ctmt.MaSach = s.MaSach
+	left join TheThuVien as ttv
+	on ttv.SoThe = mt.SoThe
+	left join DocGia as dg
+	on ttv.SoThe = dg.SoThe
+	where ctmt.Da_Tra = 0
+end
+go
+
+exec GetAllMTandCTMT
+
+alter proc InsertMTandCTMT
+    @MaMM char(10),
+	@ngayMuon DATETIME,
+	@ngayHenTra DATETIME,
+	@soThe CHAR(10),
+	@TenSach nvarchar(50)
+as
+begin
+    declare @SoLuongCon CHAR(10);
+	set @SoLuongCon=(select SoLuong from Sach where TenSach = @TenSach)
+
+	declare @MaSach char(10);
+	set @MaSach = (select MaSach from Sach where TenSach = @TenSach and SoLuong > 0)
+	
+	insert into MUONTRA (MaMuon, NgayMuon, NgayHenTra, SoThe)
+	values(
+		'MM' + cast(@MaMM as char(4)),
+		@ngayMuon,
+		@ngayHenTra,
+		@soThe
+		);
+
+	if(@SoLuongCon-1 > 0)
+		begin
+			insert into CT_MuonTra(MaMuon, MaSach, NgayTra, Da_Tra)
+	values(
+		'MM' + cast(@MaMM as char(4)),
+		@MaSach,
+		null,
+		0
+		);
+
+			UPDATE Sach
+			SET SoLuong = SoLuong - 1
+			WHERE MaSach = @MaSach
+		end
+	else
+	begin
+	UPDATE Sach
+			SET SoLuong = 0
+			WHERE MaSach = @MaSach
+	end
+
+if @@ROWCOUNT > 0 begin return 1 end
+else begin return 0 end;
+
+end
+go
+
+
+--------------------------------------------------------------------------------------------------------
+alter proc UpdateMTandCTMT
+	@MaMM char(10),
+	@ngayMuon DATETIME,
+	@ngayHenTra DATETIME,
+	@soThe CHAR(10),
+	@TenSach nvarchar(50),
+	@TenSachCu nvarchar(50)
+as
+begin
+
+	declare @SoLuongCon CHAR(10);
+	set @SoLuongCon=(select SoLuong from Sach where TenSach = @TenSach)
+
+	declare @MaSach char(10);
+	set @MaSach = (select MaSach from Sach where TenSach = @TenSach and SoLuong > 0)
+
+	declare @MaSachCu char(10);
+	set @MaSachCu = (select MaSach from Sach where TenSach = @TenSachCu)
+
+	print @MaSach;
+	print @MaSachCu;
+
+	Update MuonTra
+	set
+		NgayHenTra = @ngayHenTra,
+		NgayMuon= @ngayMuon,
+		SoThe = @soThe
+	where MaMuon = @MaMM
+
+	Update CT_MuonTra
+	set 
+		MaSach = @MaSach,
+		Da_Tra = 0,
+		NgayTra = null
+	where MaMuon = @MaMM and MaSach = @MaSachCu
+
+	UPDATE Sach
+		SET SoLuong = SoLuong- 1
+		WHERE MaSach = @MaSach
+
+	UPDATE sach
+	set SoLuong = SoLuong + 1
+	where MaSach = @MaSachCu
+	if @@ROWCOUNT > 0 begin return 1 end
+		else begin return 0 end;
+end
+go
+
+exec UpdateMTandCTMT 'MM0010','2007-12-01 00:00:00.000','2009-12-01 00:00:00.000', 'TV0002',N'Lịch sử Đảng',N'Địa lý 12'
+
+alter procedure searchMaMuon @MaM char(10)
+as 
+begin
+	select mt.MaMuon,s.TenSach, mt.NgayMuon,mt.NgayHenTra,mt.SoThe,dg.TenDocGia
+	from MuonTra as mt
+	left join CT_MuonTra as ctmt
+	on ctmt.MaMuon = mt.MaMuon
+	left join Sach as s
+	on ctmt.MaSach = s.MaSach
+	left join TheThuVien as ttv
+	on ttv.SoThe = mt.SoThe
+	left join DocGia as dg
+	on ttv.SoThe = dg.SoThe
+	where ctmt.Da_Tra = 0 and mt.MaMuon = @MaM
+end
+go
+
+
+--------------------------------
+alter procedure searchSoTheNguoiMuon @SoThe char(10)
+as 
+begin
+	select mt.MaMuon,s.TenSach, mt.NgayMuon,mt.NgayHenTra,mt.SoThe,dg.TenDocGia
+	from MuonTra as mt
+	left join CT_MuonTra as ctmt
+	on ctmt.MaMuon = mt.MaMuon
+	left join Sach as s
+	on ctmt.MaSach = s.MaSach
+	left join TheThuVien as ttv
+	on ttv.SoThe = mt.SoThe
+	left join DocGia as dg
+	on ttv.SoThe = dg.SoThe
+	where ctmt.Da_Tra = 0 and mt.SoThe = @SoThe
+end
+go
+-------------------------------
+
+create procedure searchSoTheNguoiMuon @SoThe char(10)
+as 
+begin
+	select mt.MaMuon,s.TenSach, mt.NgayMuon,mt.NgayHenTra,mt.SoThe,dg.TenDocGia
+	from MuonTra as mt
+	left join CT_MuonTra as ctmt
+	on ctmt.MaMuon = mt.MaMuon
+	left join Sach as s
+	on ctmt.MaSach = s.MaSach
+	left join TheThuVien as ttv
+	on ttv.SoThe = mt.SoThe
+	left join DocGia as dg
+	on ttv.SoThe = dg.SoThe
+	where ctmt.Da_Tra = 0 and mt.SoThe = @SoThe
+end
+go

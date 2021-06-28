@@ -38,6 +38,8 @@ namespace QuanLyThuVien
             this.lbNgayMuon = new System.Windows.Forms.Label();
             this.dtPickerMuon = new System.Windows.Forms.DateTimePicker();
             this.dtPickerTra = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbcTenSach = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // cbbSoThe
@@ -141,12 +143,34 @@ namespace QuanLyThuVien
             this.dtPickerTra.Size = new System.Drawing.Size(363, 22);
             this.dtPickerTra.TabIndex = 47;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(172, 369);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 25);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Tên sách";
+            // 
+            // cbcTenSach
+            // 
+            this.cbcTenSach.FormattingEnabled = true;
+            this.cbcTenSach.Location = new System.Drawing.Point(385, 368);
+            this.cbcTenSach.Name = "cbcTenSach";
+            this.cbcTenSach.Size = new System.Drawing.Size(363, 24);
+            this.cbcTenSach.TabIndex = 49;
+            // 
             // ThemMuonTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyThuVien.Properties.Resources._12fd70f0805bf2306f87753b08627757;
             this.ClientSize = new System.Drawing.Size(1052, 570);
+            this.Controls.Add(this.cbcTenSach);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dtPickerTra);
             this.Controls.Add(this.dtPickerMuon);
             this.Controls.Add(this.cbbSoThe);
@@ -177,5 +201,7 @@ namespace QuanLyThuVien
         private System.Windows.Forms.Label lbNgayMuon;
         private System.Windows.Forms.DateTimePicker dtPickerMuon;
         private System.Windows.Forms.DateTimePicker dtPickerTra;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbcTenSach;
     }
 }

@@ -27,9 +27,11 @@ namespace QuanLyThuVien
             dgvSearchMuonTra.DataSource = null;
             dgvSearchMuonTra.DataSource = new Database().SelectData(sqlSearch);
             dgvSearchMuonTra.Columns["MaMuon"].HeaderText = "Mã mượn";
+            dgvSearchMuonTra.Columns["TenSach"].HeaderText = "Tên sách";
             dgvSearchMuonTra.Columns["NgayMuon"].HeaderText = "Ngày mượn";
             dgvSearchMuonTra.Columns["NgayHenTra"].HeaderText = "Ngày hẹn trả";
             dgvSearchMuonTra.Columns["SoThe"].HeaderText = "Số thẻ";
+            dgvSearchMuonTra.Columns["TenDocGia"].HeaderText = "Tên người mượn";
         }
 
         private void FormSearchMuonTra_Load(object sender, EventArgs e)

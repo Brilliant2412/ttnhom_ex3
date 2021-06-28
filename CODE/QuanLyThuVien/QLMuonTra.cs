@@ -20,7 +20,12 @@ namespace QuanLyThuVien
 
         private void QLMuonTra_Load(object sender, EventArgs e)
         {
-            dgvMuonTra.DataSource = new Database().SelectData("SELECT * FROM MuonTra");
+            dgvMuonTra.DataSource = new Database().SelectData("exec GetAllMTandCTMT");
+            dgvMuonTra.Columns["MaMuon"].HeaderText = "Mã mượn";
+            dgvMuonTra.Columns["TenSach"].HeaderText = "Tên sách";
+            dgvMuonTra.Columns["NgayMuon"].HeaderText = "Ngày mượn";
+            dgvMuonTra.Columns["NgayHenTra"].HeaderText = "Ngày hẹn trả";
+            dgvMuonTra.Columns["TenDocGia"].HeaderText = "Tên độc giả";
         }
         private void dgvMuonTra_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -28,7 +33,7 @@ namespace QuanLyThuVien
             {
                 string maMuon = dgvMuonTra.Rows[e.RowIndex].Cells["MaMuon"].Value.ToString();
                 new ThemMuonTra(maMuon).ShowDialog();
-                QLMuonTra_Load(sender, e);
+                reload();
             }
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -38,7 +43,12 @@ namespace QuanLyThuVien
         }
         private void reload()
         {
-            dgvMuonTra.DataSource = new Database().SelectData("SELECT * FROM MuonTra");
+            dgvMuonTra.DataSource = new Database().SelectData("exec GetAllMTandCTMT");
+            dgvMuonTra.Columns["MaMuon"].HeaderText = "Mã mượn";
+            dgvMuonTra.Columns["TenSach"].HeaderText = "Tên sách";
+            dgvMuonTra.Columns["NgayMuon"].HeaderText = "Ngày mượn";
+            dgvMuonTra.Columns["NgayHenTra"].HeaderText = "Ngày hẹn trả";
+            dgvMuonTra.Columns["TenDocGia"].HeaderText = "Tên độc giả";
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
