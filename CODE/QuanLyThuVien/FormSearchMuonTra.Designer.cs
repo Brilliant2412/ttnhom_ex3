@@ -37,17 +37,20 @@ namespace QuanLyThuVien
             // 
             this.dgvSearchMuonTra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSearchMuonTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearchMuonTra.Location = new System.Drawing.Point(70, 114);
+            this.dgvSearchMuonTra.Location = new System.Drawing.Point(93, 55);
+            this.dgvSearchMuonTra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvSearchMuonTra.Name = "dgvSearchMuonTra";
-            this.dgvSearchMuonTra.Size = new System.Drawing.Size(550, 153);
+            this.dgvSearchMuonTra.RowHeadersWidth = 51;
+            this.dgvSearchMuonTra.Size = new System.Drawing.Size(733, 296);
             this.dgvSearchMuonTra.TabIndex = 1;
             // 
             // FormSearchMuonTra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 352);
+            this.ClientSize = new System.Drawing.Size(933, 433);
             this.Controls.Add(this.dgvSearchMuonTra);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormSearchMuonTra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchMuonTra";

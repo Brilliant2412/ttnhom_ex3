@@ -40,29 +40,34 @@ namespace QuanLyThuVien
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(824, 402);
+            this.btnXoa.BackColor = System.Drawing.Color.Red;
+            this.btnXoa.Location = new System.Drawing.Point(1099, 537);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(84, 36);
+            this.btnXoa.Size = new System.Drawing.Size(112, 44);
             this.btnXoa.TabIndex = 13;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(811, 19);
+            this.btnSearch.BackColor = System.Drawing.Color.Aqua;
+            this.btnSearch.Location = new System.Drawing.Point(1099, 25);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(84, 33);
+            this.btnSearch.Size = new System.Drawing.Size(112, 41);
             this.btnSearch.TabIndex = 12;
             this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txbInfor
             // 
-            this.txbInfor.Location = new System.Drawing.Point(324, 20);
+            this.txbInfor.Location = new System.Drawing.Point(530, 25);
+            this.txbInfor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbInfor.Name = "txbInfor";
-            this.txbInfor.Size = new System.Drawing.Size(350, 20);
+            this.txbInfor.Size = new System.Drawing.Size(430, 22);
             this.txbInfor.TabIndex = 11;
             // 
             // cbbOption
@@ -71,46 +76,49 @@ namespace QuanLyThuVien
             this.cbbOption.Items.AddRange(new object[] {
             "Mã mượn",
             "Số thẻ"});
-            this.cbbOption.Location = new System.Drawing.Point(76, 19);
+            this.cbbOption.Location = new System.Drawing.Point(146, 25);
+            this.cbbOption.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbOption.Name = "cbbOption";
-            this.cbbOption.Size = new System.Drawing.Size(131, 21);
+            this.cbbOption.Size = new System.Drawing.Size(173, 24);
             this.cbbOption.TabIndex = 10;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(189, 402);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.BackColor = System.Drawing.Color.Aqua;
+            this.btnThem.Location = new System.Drawing.Point(146, 537);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(89, 36);
+            this.btnThem.Size = new System.Drawing.Size(119, 44);
             this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dgvMuonTra
             // 
             this.dgvMuonTra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMuonTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMuonTra.Location = new System.Drawing.Point(50, 72);
-            this.dgvMuonTra.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvMuonTra.Location = new System.Drawing.Point(146, 89);
+            this.dgvMuonTra.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvMuonTra.Name = "dgvMuonTra";
             this.dgvMuonTra.RowHeadersWidth = 51;
             this.dgvMuonTra.RowTemplate.Height = 24;
-            this.dgvMuonTra.Size = new System.Drawing.Size(939, 284);
+            this.dgvMuonTra.Size = new System.Drawing.Size(1065, 418);
             this.dgvMuonTra.TabIndex = 8;
             this.dgvMuonTra.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMuonTra_CellDoubleClick);
             // 
             // QLMuonTra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 558);
+            this.ClientSize = new System.Drawing.Size(1436, 687);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txbInfor);
             this.Controls.Add(this.cbbOption);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvMuonTra);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "QLMuonTra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLMuonTra";

@@ -48,50 +48,50 @@ namespace QuanLyThuVien
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(32, 94);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 29);
+            this.label1.Size = new System.Drawing.Size(94, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên sách";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(32, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 29);
+            this.label2.Size = new System.Drawing.Size(82, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Thể loại";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(32, 231);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 29);
+            this.label3.Size = new System.Drawing.Size(77, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Tác giả";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(32, 296);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 29);
+            this.label4.Size = new System.Drawing.Size(53, 25);
             this.label4.TabIndex = 3;
             this.label4.Text = "NXB";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(32, 356);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 29);
+            this.label5.Size = new System.Drawing.Size(90, 25);
             this.label5.TabIndex = 4;
             this.label5.Text = "Số lượng";
             // 
@@ -129,22 +129,23 @@ namespace QuanLyThuVien
             // 
             // btnCancel
             // 
+            this.btnCancel.BackColor = System.Drawing.Color.Red;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(175, 475);
+            this.btnCancel.Location = new System.Drawing.Point(489, 477);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 48);
+            this.btnCancel.Size = new System.Drawing.Size(129, 48);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Hủy";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnSave.BackColor = System.Drawing.Color.Aqua;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(479, 475);
+            this.btnSave.Location = new System.Drawing.Point(175, 477);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 48);
+            this.btnSave.Size = new System.Drawing.Size(127, 48);
             this.btnSave.TabIndex = 12;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -196,6 +197,7 @@ namespace QuanLyThuVien
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ThemSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemSach";
             this.Load += new System.EventHandler(this.ThemSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).EndInit();

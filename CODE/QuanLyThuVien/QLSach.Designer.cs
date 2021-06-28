@@ -42,35 +42,37 @@ namespace QuanLyThuVien
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 93);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(136, 114);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1070, 284);
+            this.dataGridView1.Size = new System.Drawing.Size(1110, 388);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(137, 414);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.BackColor = System.Drawing.Color.Aqua;
+            this.btnAdd.Location = new System.Drawing.Point(136, 527);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(86, 30);
+            this.btnAdd.Size = new System.Drawing.Size(115, 43);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Thêm mới";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // deleteBtn
             // 
-            this.deleteBtn.Location = new System.Drawing.Point(848, 414);
-            this.deleteBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.deleteBtn.BackColor = System.Drawing.Color.Red;
+            this.deleteBtn.Location = new System.Drawing.Point(1131, 527);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteBtn.Name = "deleteBtn";
-            this.deleteBtn.Size = new System.Drawing.Size(86, 30);
+            this.deleteBtn.Size = new System.Drawing.Size(115, 43);
             this.deleteBtn.TabIndex = 2;
             this.deleteBtn.Text = "Xóa";
-            this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // cbbForSearchBook
@@ -81,42 +83,47 @@ namespace QuanLyThuVien
             "Tên Sách",
             "Thể Loại",
             "Tên Tác Giả"});
-            this.cbbForSearchBook.Location = new System.Drawing.Point(102, 32);
+            this.cbbForSearchBook.Location = new System.Drawing.Point(136, 35);
+            this.cbbForSearchBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbForSearchBook.Name = "cbbForSearchBook";
-            this.cbbForSearchBook.Size = new System.Drawing.Size(188, 21);
+            this.cbbForSearchBook.Size = new System.Drawing.Size(181, 24);
             this.cbbForSearchBook.TabIndex = 3;
             // 
             // txtSearchBook
             // 
             this.txtSearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchBook.Location = new System.Drawing.Point(343, 32);
+            this.txtSearchBook.Location = new System.Drawing.Point(476, 39);
+            this.txtSearchBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearchBook.Name = "txtSearchBook";
-            this.txtSearchBook.Size = new System.Drawing.Size(425, 23);
+            this.txtSearchBook.Size = new System.Drawing.Size(565, 26);
             this.txtSearchBook.TabIndex = 4;
             // 
             // btnSearchBook
             // 
-            this.btnSearchBook.Location = new System.Drawing.Point(815, 28);
+            this.btnSearchBook.BackColor = System.Drawing.Color.Aqua;
+            this.btnSearchBook.Location = new System.Drawing.Point(1107, 35);
+            this.btnSearchBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSearchBook.Name = "btnSearchBook";
-            this.btnSearchBook.Size = new System.Drawing.Size(104, 30);
+            this.btnSearchBook.Size = new System.Drawing.Size(139, 37);
             this.btnSearchBook.TabIndex = 5;
             this.btnSearchBook.Text = "Tìm kiếm";
-            this.btnSearchBook.UseVisualStyleBackColor = true;
+            this.btnSearchBook.UseVisualStyleBackColor = false;
             this.btnSearchBook.Click += new System.EventHandler(this.btnSearchBook_Click);
             // 
             // QLSach
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 618);
+            this.ClientSize = new System.Drawing.Size(1393, 643);
             this.Controls.Add(this.btnSearchBook);
             this.Controls.Add(this.txtSearchBook);
             this.Controls.Add(this.cbbForSearchBook);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QLSach";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sach";
             this.Load += new System.EventHandler(this.Sach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

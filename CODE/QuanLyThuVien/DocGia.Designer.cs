@@ -40,25 +40,26 @@ namespace QuanLyThuVien
             // 
             // addDocGiaBtn
             // 
-            this.addDocGiaBtn.Location = new System.Drawing.Point(45, 405);
-            this.addDocGiaBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addDocGiaBtn.BackColor = System.Drawing.Color.Aqua;
+            this.addDocGiaBtn.Location = new System.Drawing.Point(203, 498);
+            this.addDocGiaBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addDocGiaBtn.Name = "addDocGiaBtn";
-            this.addDocGiaBtn.Size = new System.Drawing.Size(89, 36);
+            this.addDocGiaBtn.Size = new System.Drawing.Size(119, 44);
             this.addDocGiaBtn.TabIndex = 3;
             this.addDocGiaBtn.Text = "Thêm";
-            this.addDocGiaBtn.UseVisualStyleBackColor = true;
+            this.addDocGiaBtn.UseVisualStyleBackColor = false;
             this.addDocGiaBtn.Click += new System.EventHandler(this.addDocGiaBtn_Click);
             // 
             // dgvDocGia
             // 
             this.dgvDocGia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDocGia.Location = new System.Drawing.Point(58, 68);
-            this.dgvDocGia.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvDocGia.Location = new System.Drawing.Point(203, 84);
+            this.dgvDocGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDocGia.Name = "dgvDocGia";
             this.dgvDocGia.RowHeadersWidth = 51;
             this.dgvDocGia.RowTemplate.Height = 24;
-            this.dgvDocGia.Size = new System.Drawing.Size(939, 284);
+            this.dgvDocGia.Size = new System.Drawing.Size(901, 388);
             this.dgvDocGia.TabIndex = 2;
             this.dgvDocGia.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDocGia_CellDoubleClick);
             // 
@@ -69,51 +70,58 @@ namespace QuanLyThuVien
             "Mã Độc Giả",
             "Tên Độc Giả",
             "Số thẻ"});
-            this.cbbForSearchReader.Location = new System.Drawing.Point(45, 22);
+            this.cbbForSearchReader.Location = new System.Drawing.Point(203, 27);
+            this.cbbForSearchReader.Margin = new System.Windows.Forms.Padding(4);
             this.cbbForSearchReader.Name = "cbbForSearchReader";
-            this.cbbForSearchReader.Size = new System.Drawing.Size(131, 21);
+            this.cbbForSearchReader.Size = new System.Drawing.Size(173, 24);
             this.cbbForSearchReader.TabIndex = 4;
             // 
             // txtSearchReader
             // 
-            this.txtSearchReader.Location = new System.Drawing.Point(224, 22);
+            this.txtSearchReader.Location = new System.Drawing.Point(479, 27);
+            this.txtSearchReader.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchReader.Name = "txtSearchReader";
-            this.txtSearchReader.Size = new System.Drawing.Size(350, 20);
+            this.txtSearchReader.Size = new System.Drawing.Size(357, 22);
             this.txtSearchReader.TabIndex = 5;
             // 
             // btnSearchReader
             // 
-            this.btnSearchReader.Location = new System.Drawing.Point(637, 15);
+            this.btnSearchReader.BackColor = System.Drawing.Color.Aqua;
+            this.btnSearchReader.Location = new System.Drawing.Point(992, 18);
+            this.btnSearchReader.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchReader.Name = "btnSearchReader";
-            this.btnSearchReader.Size = new System.Drawing.Size(84, 33);
+            this.btnSearchReader.Size = new System.Drawing.Size(112, 41);
             this.btnSearchReader.TabIndex = 6;
             this.btnSearchReader.Text = "Tìm kiếm";
-            this.btnSearchReader.UseVisualStyleBackColor = true;
+            this.btnSearchReader.UseVisualStyleBackColor = false;
             this.btnSearchReader.Click += new System.EventHandler(this.btnSearchReader_Click);
             // 
             // btnDealeteReader
             // 
-            this.btnDealeteReader.Location = new System.Drawing.Point(637, 405);
+            this.btnDealeteReader.BackColor = System.Drawing.Color.Red;
+            this.btnDealeteReader.Location = new System.Drawing.Point(992, 498);
+            this.btnDealeteReader.Margin = new System.Windows.Forms.Padding(4);
             this.btnDealeteReader.Name = "btnDealeteReader";
-            this.btnDealeteReader.Size = new System.Drawing.Size(84, 36);
+            this.btnDealeteReader.Size = new System.Drawing.Size(112, 44);
             this.btnDealeteReader.TabIndex = 7;
             this.btnDealeteReader.Text = "Xóa";
-            this.btnDealeteReader.UseVisualStyleBackColor = true;
+            this.btnDealeteReader.UseVisualStyleBackColor = false;
             this.btnDealeteReader.Click += new System.EventHandler(this.btnDealeteReader_Click);
             // 
             // DocGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 648);
+            this.ClientSize = new System.Drawing.Size(1262, 648);
             this.Controls.Add(this.btnDealeteReader);
             this.Controls.Add(this.btnSearchReader);
             this.Controls.Add(this.txtSearchReader);
             this.Controls.Add(this.cbbForSearchReader);
             this.Controls.Add(this.addDocGiaBtn);
             this.Controls.Add(this.dgvDocGia);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DocGia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DocGia";
             this.Load += new System.EventHandler(this.DocGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDocGia)).EndInit();

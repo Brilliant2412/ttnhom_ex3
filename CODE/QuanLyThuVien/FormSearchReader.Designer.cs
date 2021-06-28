@@ -36,18 +36,22 @@ namespace QuanLyThuVien
             // dgvSearchReader
             // 
             this.dgvSearchReader.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearchReader.Location = new System.Drawing.Point(72, 46);
+            this.dgvSearchReader.Location = new System.Drawing.Point(96, 57);
+            this.dgvSearchReader.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSearchReader.Name = "dgvSearchReader";
-            this.dgvSearchReader.Size = new System.Drawing.Size(522, 145);
+            this.dgvSearchReader.RowHeadersWidth = 51;
+            this.dgvSearchReader.Size = new System.Drawing.Size(688, 282);
             this.dgvSearchReader.TabIndex = 0;
             // 
             // FormSearchReader
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 260);
+            this.ClientSize = new System.Drawing.Size(895, 424);
             this.Controls.Add(this.dgvSearchReader);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSearchReader";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchReader";
             this.Load += new System.EventHandler(this.FormSearchReader_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSearchReader)).EndInit();

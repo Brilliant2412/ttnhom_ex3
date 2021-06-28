@@ -36,21 +36,23 @@ namespace QuanLyThuVien
             // dvgSearch
             // 
             this.dvgSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgSearch.Location = new System.Drawing.Point(43, 25);
-            this.dvgSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.dvgSearch.Location = new System.Drawing.Point(57, 31);
+            this.dvgSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dvgSearch.Name = "dvgSearch";
             this.dvgSearch.RowHeadersWidth = 51;
             this.dvgSearch.RowTemplate.Height = 24;
-            this.dvgSearch.Size = new System.Drawing.Size(526, 256);
+            this.dvgSearch.Size = new System.Drawing.Size(701, 315);
             this.dvgSearch.TabIndex = 3;
             // 
             // FormSearchBook
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 307);
+            this.ClientSize = new System.Drawing.Size(817, 378);
             this.Controls.Add(this.dvgSearch);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormSearchBook";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchBook";
             this.Load += new System.EventHandler(this.FormSearchBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgSearch)).EndInit();
