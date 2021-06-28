@@ -21,21 +21,23 @@ namespace QuanLyThuVien
 
         private void ThemDocGia_Load(object sender, EventArgs e)
         {
-            DataTable theTable = new Database().SelectData("SELECT SoThe from TheThuVien where NgayBatDau is null");
-            cboxSoThe.DisplayMember = "SoThe";
-            cboxSoThe.ValueMember = "SoThe";
-            cboxSoThe.DataSource = theTable.Copy();
+            
+            //DataTable theTable = new Database().SelectData("SELECT SoThe from TheThuVien where NgayBatDau is null");
+            //cboxSoThe.DisplayMember = "SoThe";
+            //cboxSoThe.ValueMember = "SoThe";
+            //cboxSoThe.DataSource = theTable.Copy();
+            var res = new Database().Select("SELECT current_value FROM sys.sequences WHERE name = 'TheThuVien_seg'");
+            txtSothe.Text = (Convert.ToInt32(res) + 1).ToString();
             if (string.IsNullOrEmpty(maDocGia))
             {
                 this.Text = "Thêm độc giả";
-
             }
             else
             {
                 var r = new Database().Select(string.Format("SelectDocGiaById '" + maDocGia + "'"));
                 tboxDiaChi.Text = r["DiaChi"].ToString();
                 tboxTenDocGia.Text = r["TenDocGia"].ToString();
-                
+                txtSothe.Text = r["SoThe"].ToString();
                 this.Text = "Chỉnh sửa thông tin độc giả";
             }
         }
@@ -48,21 +50,19 @@ namespace QuanLyThuVien
             string diaChi = tboxDiaChi.Text;
             DateTime ngayBatDau = dtpNgayBatDau.Value;
             DateTime ngayHetHan = dtpNgayKetThuc.Value;
-
-            DataRowView drvSoThe = (DataRowView)cboxSoThe.SelectedItem;
-            string soThe = drvSoThe.Row.Field<string>("SoThe");
-
+            string soThe = txtSothe.Text;
             List<CustomParameter> lstPara = new List<CustomParameter>();
             List<CustomParameter> lstPara2 = new List<CustomParameter>();
 
             if (string.IsNullOrEmpty(maDocGia))
             {
                 sql = "ThemMoiDocGia";
-                sql2 = "UpdateTheThuVIen";
+                sql2 = "ThemMoiTheThuVIen";
             }
             else
             {
                 sql = "UpdateDocGia";
+                sql2 = "UpdateTheThuVIen";
                 lstPara.Add(new CustomParameter()
                 {
                     key = "@maDocGia",

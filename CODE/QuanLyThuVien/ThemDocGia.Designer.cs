@@ -29,7 +29,6 @@ namespace QuanLyThuVien
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboxSoThe = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -42,16 +41,8 @@ namespace QuanLyThuVien
             this.dtpNgayKetThuc = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.txtSothe = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // cboxSoThe
-            // 
-            this.cboxSoThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxSoThe.FormattingEnabled = true;
-            this.cboxSoThe.Location = new System.Drawing.Point(286, 265);
-            this.cboxSoThe.Name = "cboxSoThe";
-            this.cboxSoThe.Size = new System.Drawing.Size(410, 37);
-            this.cboxSoThe.TabIndex = 37;
             // 
             // label6
             // 
@@ -168,16 +159,24 @@ namespace QuanLyThuVien
             this.label5.TabIndex = 42;
             this.label5.Text = "Ngày Kết Thúc";
             // 
+            // txtSothe
+            // 
+            this.txtSothe.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSothe.Location = new System.Drawing.Point(286, 259);
+            this.txtSothe.Name = "txtSothe";
+            this.txtSothe.Size = new System.Drawing.Size(410, 34);
+            this.txtSothe.TabIndex = 43;
+            // 
             // ThemDocGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 570);
+            this.Controls.Add(this.txtSothe);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpNgayKetThuc);
             this.Controls.Add(this.dtpNgayBatDau);
-            this.Controls.Add(this.cboxSoThe);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
@@ -196,8 +195,6 @@ namespace QuanLyThuVien
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cboxSoThe;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
@@ -210,5 +207,6 @@ namespace QuanLyThuVien
         private System.Windows.Forms.DateTimePicker dtpNgayKetThuc;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSothe;
     }
 }

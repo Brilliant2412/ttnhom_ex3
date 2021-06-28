@@ -275,7 +275,8 @@ create procedure SelectDocGiaById
 	@maDocGia char(10)
 as
 begin
-	select * from DocGia where MaDG = @maDocGia
+	select dg.DiaChi,dg.TenDocGia,dg.SoThe from DocGia as dg,TheThuVien as ttv
+where MaDG = @maDocGia and ttv.SoThe = dg.SoThe
 end
 go
 
