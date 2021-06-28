@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,8 @@ namespace QuanLyThuVien
             //cboxSoThe.ValueMember = "SoThe";
             //cboxSoThe.DataSource = theTable.Copy();
             var res = new Database().Select("SELECT current_value FROM sys.sequences WHERE name = 'TheThuVien_seg'");
-            txtSothe.Text = (Convert.ToInt32(res) + 1).ToString();
+            txtSothe.Text = (Convert.ToInt32(res["current_value"]) + 1).ToString();
+            txtSothe.ReadOnly = true;
             if (string.IsNullOrEmpty(maDocGia))
             {
                 this.Text = "Thêm độc giả";
@@ -38,6 +40,13 @@ namespace QuanLyThuVien
                 tboxDiaChi.Text = r["DiaChi"].ToString();
                 tboxTenDocGia.Text = r["TenDocGia"].ToString();
                 txtSothe.Text = r["SoThe"].ToString();
+                //dtpNgayBatDau.Format = DateTimePickerFormat.Custom;
+                //dtpNgayBatDau.CustomFormat = "dd-MM-yyyy";
+                dtpNgayBatDau.Value = Convert.ToDateTime(r["NgayBatDau"]);
+                //dtpNgayKetThuc.Format = DateTimePickerFormat.Custom;
+                //dtpNgayKetThuc.CustomFormat = "dd-MM-yyyy";
+                dtpNgayKetThuc.Value = Convert.ToDateTime(r["NgayHetHan"]);
+                //DateTime.ParseExact(r["NgayHetHan"].ToString(), "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 this.Text = "Chỉnh sửa thông tin độc giả";
             }
         }
@@ -50,14 +59,19 @@ namespace QuanLyThuVien
             string diaChi = tboxDiaChi.Text;
             DateTime ngayBatDau = dtpNgayBatDau.Value;
             DateTime ngayHetHan = dtpNgayKetThuc.Value;
-            string soThe = txtSothe.Text;
+            string soTheAdd = txtSothe.Text;
             List<CustomParameter> lstPara = new List<CustomParameter>();
             List<CustomParameter> lstPara2 = new List<CustomParameter>();
-
+            string soThe = "TV" + soTheAdd;
             if (string.IsNullOrEmpty(maDocGia))
             {
                 sql = "ThemMoiDocGia";
                 sql2 = "ThemMoiTheThuVIen";
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@soThe",
+                    value = soThe
+                });
             }
             else
             {
@@ -67,6 +81,17 @@ namespace QuanLyThuVien
                 {
                     key = "@maDocGia",
                     value = maDocGia
+                });
+                lstPara2.Add(new CustomParameter()
+                {
+                    key = "@soThe",
+                    value = soTheAdd
+                });
+
+                lstPara.Add(new CustomParameter()
+                {
+                    key = "@soThe",
+                    value = soTheAdd
                 });
             }
 
@@ -81,19 +106,11 @@ namespace QuanLyThuVien
                 key = "@diaChi",
                 value = diaChi
             });
-
-            lstPara.Add(new CustomParameter()
-            {
-                key = "@soThe",
-                value = soThe
-            });
+           
 
 
-            lstPara2.Add(new CustomParameter()
-            {
-                key = "@soThe",
-                value = soThe
-            });
+
+
             lstPara2.Add(new CustomParameter()
             {
                 key = "@ngayBatDau",
@@ -105,9 +122,8 @@ namespace QuanLyThuVien
                 value = ngayHetHan.ToString("yyyy-MM-dd")
             });
 
-
-            var rs = new Database().execute(sql, lstPara);
             var rs2 = new Database().execute(sql2, lstPara2);
+            var rs = new Database().execute(sql, lstPara);
             if (rs == 1 && rs2==1)
             {
                 if (string.IsNullOrEmpty(maDocGia))
@@ -129,6 +145,11 @@ namespace QuanLyThuVien
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtSothe_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

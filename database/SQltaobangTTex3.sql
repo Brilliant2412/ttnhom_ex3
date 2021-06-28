@@ -271,17 +271,21 @@ begin
 end
 go
 
-create procedure SelectDocGiaById
+alter procedure SelectDocGiaById
 	@maDocGia char(10)
 as
 begin
-	select dg.DiaChi,dg.TenDocGia,dg.SoThe from DocGia as dg,TheThuVien as ttv
+	select dg.DiaChi,dg.TenDocGia,dg.SoThe, ttv.NgayBatDau,ttv.NgayHetHan
+	from DocGia as dg,TheThuVien as ttv
 where MaDG = @maDocGia and ttv.SoThe = dg.SoThe
 end
 go
 
+exec SelectDocGiaById 'MDG23'
 
 
+SELECT current_value FROM sys.sequences WHERE name = 'TheThuVien_seg'
+SELECT current_value FROM sys.sequences WHERE name = 'DocGia_seq'
 
 
 -----Search Doc Gia--------

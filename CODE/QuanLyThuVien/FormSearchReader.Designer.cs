@@ -36,7 +36,7 @@ namespace QuanLyThuVien
             // dgvSearchReader
             // 
             this.dgvSearchReader.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSearchReader.Location = new System.Drawing.Point(96, 57);
+            this.dgvSearchReader.Location = new System.Drawing.Point(144, 78);
             this.dgvSearchReader.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSearchReader.Name = "dgvSearchReader";
             this.dgvSearchReader.RowHeadersWidth = 51;
@@ -48,7 +48,7 @@ namespace QuanLyThuVien
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QuanLyThuVien.Properties.Resources._10_mnt_design_hinh_nen_giao_duc_truong_hoc_optimized;
-            this.ClientSize = new System.Drawing.Size(895, 424);
+            this.ClientSize = new System.Drawing.Size(895, 409);
             this.Controls.Add(this.dgvSearchReader);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSearchReader";
