@@ -534,6 +534,9 @@ begin
 			SET SoLuong = 0
 			WHERE MaSach = @MaSach
 	end
+	SELECT NEXT VALUE FOR MuonTra_seq
+	
+
 
 if @@ROWCOUNT > 0 begin return 1 end
 else begin return 0 end;
@@ -541,7 +544,7 @@ else begin return 0 end;
 end
 go
 
-
+SELECT current_value FROM sys.sequences WHERE name = 'MuonTra_seq'
 --------------------------------------------------------------------------------------------------------
 alter proc UpdateMTandCTMT
 	@MaMM char(10),
@@ -586,8 +589,8 @@ begin
 	UPDATE sach
 	set SoLuong = SoLuong + 1
 	where MaSach = @MaSachCu
-	if @@ROWCOUNT > 0 begin return 1 end
-		else begin return 0 end;
+
+	
 end
 go
 
