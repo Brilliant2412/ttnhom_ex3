@@ -54,7 +54,7 @@ namespace QuanLyThuVien
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Aqua;
-            this.btnSearch.Location = new System.Drawing.Point(1099, 23);
+            this.btnSearch.Location = new System.Drawing.Point(934, 16);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(112, 44);
@@ -65,7 +65,7 @@ namespace QuanLyThuVien
             // 
             // txbInfor
             // 
-            this.txbInfor.Location = new System.Drawing.Point(530, 25);
+            this.txbInfor.Location = new System.Drawing.Point(422, 27);
             this.txbInfor.Margin = new System.Windows.Forms.Padding(4);
             this.txbInfor.Name = "txbInfor";
             this.txbInfor.Size = new System.Drawing.Size(430, 22);
@@ -106,18 +106,20 @@ namespace QuanLyThuVien
             this.dgvMuonTra.RowTemplate.Height = 24;
             this.dgvMuonTra.Size = new System.Drawing.Size(1065, 418);
             this.dgvMuonTra.TabIndex = 8;
+            this.dgvMuonTra.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMuonTra_CellClick);
             this.dgvMuonTra.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMuonTra_CellDoubleClick);
             // 
             // btnTraSach
             // 
             this.btnTraSach.BackColor = System.Drawing.Color.Aqua;
-            this.btnTraSach.Location = new System.Drawing.Point(973, 23);
+            this.btnTraSach.Location = new System.Drawing.Point(1092, 14);
             this.btnTraSach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTraSach.Name = "btnTraSach";
             this.btnTraSach.Size = new System.Drawing.Size(119, 44);
             this.btnTraSach.TabIndex = 14;
             this.btnTraSach.Text = "Trả sách";
             this.btnTraSach.UseVisualStyleBackColor = false;
+            this.btnTraSach.Click += new System.EventHandler(this.btnTraSach_Click);
             // 
             // QLMuonTra
             // 

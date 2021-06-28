@@ -149,3 +149,4 @@ E:\1 school\1 ki 6\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.
 E:\1 school\1 ki 6\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.csproj.CoreCompileInputs.cache
 E:\1 school\1 ki 6\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.exe
 E:\1 school\1 ki 6\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.pdb
+E:\1 school\1 ki 6\ttnhom_ex3\CODE\QuanLyThuVien\obj\Debug\QuanLyThuVien.FormTraSach.resources

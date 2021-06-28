@@ -13,6 +13,7 @@ namespace QuanLyThuVien
 {
     public partial class QLMuonTra : Form
     {
+        public string MaMuon;
         public QLMuonTra()
         {
             InitializeComponent();
@@ -25,7 +26,9 @@ namespace QuanLyThuVien
             dgvMuonTra.Columns["TenSach"].HeaderText = "Tên sách";
             dgvMuonTra.Columns["NgayMuon"].HeaderText = "Ngày mượn";
             dgvMuonTra.Columns["NgayHenTra"].HeaderText = "Ngày hẹn trả";
+            dgvMuonTra.Columns["SoThe"].HeaderText = "Số thẻ";
             dgvMuonTra.Columns["TenDocGia"].HeaderText = "Tên độc giả";
+
         }
         private void dgvMuonTra_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -34,6 +37,7 @@ namespace QuanLyThuVien
                 string maMuon = dgvMuonTra.Rows[e.RowIndex].Cells["MaMuon"].Value.ToString();
                 new ThemMuonTra(maMuon).ShowDialog();
                 reload();
+              
             }
         }
         private void btnThem_Click(object sender, EventArgs e)
@@ -105,6 +109,20 @@ namespace QuanLyThuVien
                     }
                 }
                 resetValue();
+            }
+        }
+
+        private void btnTraSach_Click(object sender, EventArgs e)
+        {
+            new FormTraSach(MaMuon).ShowDialog();
+            reload();
+        }
+
+        private void dgvMuonTra_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                MaMuon = dgvMuonTra.Rows[e.RowIndex].Cells["MaMuon"].Value.ToString();
             }
         }
     }

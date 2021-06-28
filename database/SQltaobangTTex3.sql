@@ -330,9 +330,9 @@ go
 
 
 
-exec SelectMuonTraandCTMTById 
+exec SelectMuonTraandCTMTById  'MM11'
 
-EXEC SelectMuonTraById 'MM0001'
+EXEC SelectMuonTraById 
 
 GO
 CREATE PROCEDURE ThemMoiMuonTra
@@ -473,10 +473,10 @@ end
 
 exec SelectMuonTraandCTMTById 'MM0001'
 
-create proc GetAllMTandCTMT
+alter proc GetAllMTandCTMT
 as
 begin
-	select mt.MaMuon,s.TenSach, mt.NgayMuon,mt.NgayHenTra,dg.TenDocGia
+	select mt.MaMuon,s.TenSach, mt.NgayMuon,mt.NgayHenTra,dg.TenDocGia,mt.SoThe
 	from MuonTra as mt
 	left join CT_MuonTra as ctmt
 	on ctmt.MaMuon = mt.MaMuon
@@ -610,6 +610,23 @@ begin
 end
 go
 
+create procedure searchMaMuonDeTra @MaM char(10)
+as 
+begin
+	select mt.MaMuon,s.TenSach, mt.NgayMuon,mt.NgayHenTra,mt.SoThe,dg.TenDocGia
+	from MuonTra as mt
+	left join CT_MuonTra as ctmt
+	on ctmt.MaMuon = mt.MaMuon
+	left join Sach as s
+	on ctmt.MaSach = s.MaSach
+	left join TheThuVien as ttv
+	on ttv.SoThe = mt.SoThe
+	left join DocGia as dg
+	on ttv.SoThe = dg.SoThe
+	where ctmt.Da_Tra = 0 and mt.MaMuon = @MaM
+end
+go
+
 
 --------------------------------
 alter procedure searchSoTheNguoiMuon @SoThe char(10)
@@ -630,7 +647,7 @@ end
 go
 -------------------------------
 
-create procedure searchSoTheNguoiMuon @SoThe char(10)
+alter procedure searchMaMuon @MaM char(10)
 as 
 begin
 	select mt.MaMuon,s.TenSach, mt.NgayMuon,mt.NgayHenTra,mt.SoThe,dg.TenDocGia
@@ -643,6 +660,37 @@ begin
 	on ttv.SoThe = mt.SoThe
 	left join DocGia as dg
 	on ttv.SoThe = dg.SoThe
-	where ctmt.Da_Tra = 0 and mt.SoThe = @SoThe
+	where ctmt.Da_Tra = 0 and mt.MaMuon = @MaM
+end
+go
+
+
+create procedure updateCTMTKhiTraSach 
+	@MaMM char(10),
+	@ngayTra DATETIME,
+	@soThe CHAR(10),
+	@TenSach nvarchar(50)
+as 
+begin
+	declare @SoLuongCon CHAR(10);
+	set @SoLuongCon=(select SoLuong from Sach where TenSach = @TenSach)
+
+	declare @MaSach char(10);
+	set @MaSach = (select MaSach from Sach where TenSach = @TenSach)
+
+	Update CT_MuonTra
+	set 
+		MaSach = @MaSach,
+		Da_Tra = 1,
+		NgayTra = @ngayTra
+	where MaMuon = @MaMM and MaSach = @MaSach
+
+	UPDATE Sach
+		SET SoLuong = SoLuong + 1
+		WHERE MaSach = @MaSach
+
+
+	if @@ROWCOUNT > 0 begin return 1 end
+		else begin return 0 end;
 end
 go
