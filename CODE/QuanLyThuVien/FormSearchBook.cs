@@ -16,6 +16,7 @@ namespace QuanLyThuVien
         public FormSearchBook()
         {
             InitializeComponent();
+
         }
 
         public FormSearchBook(string sql)

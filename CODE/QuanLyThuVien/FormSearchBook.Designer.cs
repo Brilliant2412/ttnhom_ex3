@@ -48,9 +48,10 @@ namespace QuanLyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyThuVien.Properties.Resources._10_mnt_design_hinh_nen_giao_duc_truong_hoc_optimized;
             this.ClientSize = new System.Drawing.Size(817, 378);
             this.Controls.Add(this.dvgSearch);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSearchBook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchBook";

@@ -138,6 +138,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="QLMuonTra.resx">
       <DependentUpon>QLMuonTra.cs</DependentUpon>
@@ -169,6 +170,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8be4ebd05797041e3b8a6f25777dfdb7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10-mnt-design-hinh-nen-giao-duc-truong-hoc_optimized.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12fd70f0805bf2306f87753b08627757.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

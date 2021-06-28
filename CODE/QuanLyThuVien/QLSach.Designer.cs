@@ -84,7 +84,7 @@ namespace QuanLyThuVien
             "Thể Loại",
             "Tên Tác Giả"});
             this.cbbForSearchBook.Location = new System.Drawing.Point(136, 35);
-            this.cbbForSearchBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbForSearchBook.Margin = new System.Windows.Forms.Padding(4);
             this.cbbForSearchBook.Name = "cbbForSearchBook";
             this.cbbForSearchBook.Size = new System.Drawing.Size(181, 24);
             this.cbbForSearchBook.TabIndex = 3;
@@ -93,7 +93,7 @@ namespace QuanLyThuVien
             // 
             this.txtSearchBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchBook.Location = new System.Drawing.Point(476, 39);
-            this.txtSearchBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchBook.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchBook.Name = "txtSearchBook";
             this.txtSearchBook.Size = new System.Drawing.Size(565, 26);
             this.txtSearchBook.TabIndex = 4;
@@ -102,7 +102,7 @@ namespace QuanLyThuVien
             // 
             this.btnSearchBook.BackColor = System.Drawing.Color.Aqua;
             this.btnSearchBook.Location = new System.Drawing.Point(1107, 35);
-            this.btnSearchBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearchBook.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearchBook.Name = "btnSearchBook";
             this.btnSearchBook.Size = new System.Drawing.Size(139, 37);
             this.btnSearchBook.TabIndex = 5;
@@ -114,6 +114,7 @@ namespace QuanLyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyThuVien.Properties.Resources._12fd70f0805bf2306f87753b08627757;
             this.ClientSize = new System.Drawing.Size(1393, 643);
             this.Controls.Add(this.btnSearchBook);
             this.Controls.Add(this.txtSearchBook);

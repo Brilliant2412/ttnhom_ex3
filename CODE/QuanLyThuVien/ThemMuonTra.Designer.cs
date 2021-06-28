@@ -53,8 +53,9 @@ namespace QuanLyThuVien
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Purple;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(401, 45);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(294, 36);
@@ -91,7 +92,9 @@ namespace QuanLyThuVien
             // lbSoThe
             // 
             this.lbSoThe.AutoSize = true;
+            this.lbSoThe.BackColor = System.Drawing.Color.Transparent;
             this.lbSoThe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoThe.ForeColor = System.Drawing.Color.White;
             this.lbSoThe.Location = new System.Drawing.Point(172, 311);
             this.lbSoThe.Name = "lbSoThe";
             this.lbSoThe.Size = new System.Drawing.Size(69, 25);
@@ -101,7 +104,9 @@ namespace QuanLyThuVien
             // lbNgayTra
             // 
             this.lbNgayTra.AutoSize = true;
+            this.lbNgayTra.BackColor = System.Drawing.Color.Transparent;
             this.lbNgayTra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgayTra.ForeColor = System.Drawing.Color.White;
             this.lbNgayTra.Location = new System.Drawing.Point(172, 230);
             this.lbNgayTra.Name = "lbNgayTra";
             this.lbNgayTra.Size = new System.Drawing.Size(123, 25);
@@ -111,8 +116,10 @@ namespace QuanLyThuVien
             // lbNgayMuon
             // 
             this.lbNgayMuon.AutoSize = true;
+            this.lbNgayMuon.BackColor = System.Drawing.Color.Transparent;
             this.lbNgayMuon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgayMuon.Location = new System.Drawing.Point(172, 154);
+            this.lbNgayMuon.ForeColor = System.Drawing.Color.White;
+            this.lbNgayMuon.Location = new System.Drawing.Point(172, 158);
             this.lbNgayMuon.Name = "lbNgayMuon";
             this.lbNgayMuon.Size = new System.Drawing.Size(112, 25);
             this.lbNgayMuon.TabIndex = 38;
@@ -121,7 +128,7 @@ namespace QuanLyThuVien
             // dtPickerMuon
             // 
             this.dtPickerMuon.Location = new System.Drawing.Point(385, 158);
-            this.dtPickerMuon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtPickerMuon.Margin = new System.Windows.Forms.Padding(4);
             this.dtPickerMuon.Name = "dtPickerMuon";
             this.dtPickerMuon.Size = new System.Drawing.Size(363, 22);
             this.dtPickerMuon.TabIndex = 47;
@@ -129,7 +136,7 @@ namespace QuanLyThuVien
             // dtPickerTra
             // 
             this.dtPickerTra.Location = new System.Drawing.Point(385, 230);
-            this.dtPickerTra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtPickerTra.Margin = new System.Windows.Forms.Padding(4);
             this.dtPickerTra.Name = "dtPickerTra";
             this.dtPickerTra.Size = new System.Drawing.Size(363, 22);
             this.dtPickerTra.TabIndex = 47;
@@ -138,6 +145,7 @@ namespace QuanLyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyThuVien.Properties.Resources._12fd70f0805bf2306f87753b08627757;
             this.ClientSize = new System.Drawing.Size(1052, 570);
             this.Controls.Add(this.dtPickerTra);
             this.Controls.Add(this.dtPickerMuon);
@@ -148,7 +156,7 @@ namespace QuanLyThuVien
             this.Controls.Add(this.lbSoThe);
             this.Controls.Add(this.lbNgayTra);
             this.Controls.Add(this.lbNgayMuon);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ThemMuonTra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThemMuonTra";

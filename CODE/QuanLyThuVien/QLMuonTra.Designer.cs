@@ -42,7 +42,7 @@ namespace QuanLyThuVien
             // 
             this.btnXoa.BackColor = System.Drawing.Color.Red;
             this.btnXoa.Location = new System.Drawing.Point(1099, 537);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 44);
             this.btnXoa.TabIndex = 13;
@@ -54,7 +54,7 @@ namespace QuanLyThuVien
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Aqua;
             this.btnSearch.Location = new System.Drawing.Point(1099, 25);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(112, 41);
             this.btnSearch.TabIndex = 12;
@@ -65,7 +65,7 @@ namespace QuanLyThuVien
             // txbInfor
             // 
             this.txbInfor.Location = new System.Drawing.Point(530, 25);
-            this.txbInfor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbInfor.Margin = new System.Windows.Forms.Padding(4);
             this.txbInfor.Name = "txbInfor";
             this.txbInfor.Size = new System.Drawing.Size(430, 22);
             this.txbInfor.TabIndex = 11;
@@ -77,7 +77,7 @@ namespace QuanLyThuVien
             "Mã mượn",
             "Số thẻ"});
             this.cbbOption.Location = new System.Drawing.Point(146, 25);
-            this.cbbOption.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbbOption.Margin = new System.Windows.Forms.Padding(4);
             this.cbbOption.Name = "cbbOption";
             this.cbbOption.Size = new System.Drawing.Size(173, 24);
             this.cbbOption.TabIndex = 10;
@@ -111,6 +111,7 @@ namespace QuanLyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyThuVien.Properties.Resources._12fd70f0805bf2306f87753b08627757;
             this.ClientSize = new System.Drawing.Size(1436, 687);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSearch);
@@ -118,7 +119,7 @@ namespace QuanLyThuVien
             this.Controls.Add(this.cbbOption);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvMuonTra);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "QLMuonTra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QLMuonTra";

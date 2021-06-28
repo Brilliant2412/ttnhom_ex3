@@ -38,7 +38,7 @@ namespace QuanLyThuVien
             this.dgvSearchMuonTra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSearchMuonTra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSearchMuonTra.Location = new System.Drawing.Point(93, 55);
-            this.dgvSearchMuonTra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvSearchMuonTra.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSearchMuonTra.Name = "dgvSearchMuonTra";
             this.dgvSearchMuonTra.RowHeadersWidth = 51;
             this.dgvSearchMuonTra.Size = new System.Drawing.Size(733, 296);
@@ -48,9 +48,10 @@ namespace QuanLyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyThuVien.Properties.Resources._10_mnt_design_hinh_nen_giao_duc_truong_hoc_optimized;
             this.ClientSize = new System.Drawing.Size(933, 433);
             this.Controls.Add(this.dgvSearchMuonTra);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSearchMuonTra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSearchMuonTra";

@@ -112,6 +112,7 @@ namespace QuanLyThuVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::QuanLyThuVien.Properties.Resources._12fd70f0805bf2306f87753b08627757;
             this.ClientSize = new System.Drawing.Size(1262, 648);
             this.Controls.Add(this.btnDealeteReader);
             this.Controls.Add(this.btnSearchReader);

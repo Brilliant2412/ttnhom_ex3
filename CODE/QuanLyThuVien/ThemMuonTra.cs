@@ -16,6 +16,9 @@ namespace QuanLyThuVien
         private string maMuon;
         public ThemMuonTra(string maMuon)
         {
+            this.lbNgayMuon.BackColor = System.Drawing.Color.Transparent;
+            this.lbNgayTra.BackColor = System.Drawing.Color.Transparent;
+            this.lbSoThe.BackColor = System.Drawing.Color.Transparent;
             this.maMuon = maMuon;
             InitializeComponent();
         }
