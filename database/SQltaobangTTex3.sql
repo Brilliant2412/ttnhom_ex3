@@ -386,3 +386,13 @@ begin
 	from MuonTra
 	where SoThe = @Sothe
 end
+
+
+
+alter procedure SelectSachById @MaSach char(10)
+as 
+begin
+	select TenSach,TenTheLoai,TenTacGia,TenNXB,SoLuong
+	from Sach
+	where MaSach = @MaSach
+end
